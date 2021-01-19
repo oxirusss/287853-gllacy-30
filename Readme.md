@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Dmitry Sergeev](https://up.htmlacademy.ru/htmlcss/30/user/287853).
-* Наставник: `Неизвестно`.
+* Наставник: [Алёна Сиприкова](https://up.htmlacademy.ru/htmlcss/30/user/549115).
 
 ---
 
