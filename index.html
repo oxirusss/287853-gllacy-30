@@ -1,19 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Магазин мороженного Глейси</title>
 </head>
 
 <body>
     <header class="main-header">
         <nav class="main-navigation">
-            <div class="logo">
+            <a class="logo" href="#">
                 <img src="https://via.placeholder.com/154x64" alt="Логотип магазина">
-            </div>
+            </a>
             <ul class="site-navigation">
-                <li><a href="catalog.html">Каталог</a>
+                <li>
+                    <a href="catalog.html">Каталог</a>
                     <ul class="submenu-list">
                         <li><span>Новинки</span></li>
                         <li><a href="catalog.html">Сливочное</a></li>
@@ -25,15 +26,19 @@
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О компании</a></li>
             </ul>
+
+
             <ul class="user-navigation">
                 <li>
-                    <a href="#">
-                        <span class="visually-hidden">Поиск</span>
-                        <img src="https://via.placeholder.com/16x16" alt="Значок поиска">
-                    </a>
-                    <form action="https://echo.htmlacademy.ru" method="post">
-                        <label for="search-form">Поиск</label>
-                        <input type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                    <form action="https://echo.htmlacademy.ru" method="get">
+                        <button type="submit">
+                            <span class="visually-hidden">Поиск</span>
+                            <img src="https://via.placeholder.com/16x16" alt="Значок поиска">
+                        </button>
+                        <div>
+                            <label for="search-form">Поиск</label>
+                            <input type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                        </div>
                     </form>
                 </li>
                 <li>
@@ -41,6 +46,26 @@
                         <img src="https://via.placeholder.com/20x19" alt="Значок входа">
                         <span class="visually-hidden">Вход</span>
                     </a>
+                    <!--TODO
+                             Черновик разметки формы. Не уверенна, правильно обернуть пункты div или обычным p. 
+                              <form action="https://echo.htmlacademy.ru" method="post">
+                                 <a href="#">
+                        <img src="https://via.placeholder.com/20x19" alt="Значок входа">
+                        <span class="visually-hidden">Вход</span>
+                                    </a>
+                                  <div>
+                                      <label for="email-field" class="visually-hidden">Email</label>
+                                      <input type="email" name="email" id="email-field" placeholder="Электронная почта">
+                                      <label for="password-field" class="visually-hidden">Пароль</label>
+                                      <input type="password" name="password" id="password-field" placeholder="Пароль">
+                                      <button type="submit">Войти</button>
+                                  </div>
+                                  <div>
+                                      <p><a href="#">Забыли пароль?</a></p>
+                                      <p><a href="#">Новая регистрация</a></p>
+                                  </div>
+                              </form>
+                   -->
                 </li>
                 <li>
                     <a href="#">
@@ -52,15 +77,17 @@
         </nav>
         <div class="header-contacts">
             <p>с 10 до 20, ежедневно</p>
-            <p>8 812 450-25-25</p>
+            <a href="tel:88124502525">8 812 450-25-25</a>
         </div>
     </header>
+
+
 
 
     <main>
         <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
         <section class="sliders">
-            <ul>
+            <ul class="slider-list">
                 <li>
                     <h3>Крем-брюле и пломбир с малиновым джемом</h3>
                     <a href="#">Давайте оба!</a>
@@ -73,6 +100,11 @@
                     <h3>Пломбир с помадкой и клубничный щербет</h3>
                     <a href="#">Давайте оба!</a>
                 </li>
+            </ul>
+            <ul class="slider-pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
             </ul>
         </section>
         <section class="offers">
@@ -98,28 +130,28 @@
                         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                     </a>
                     <p>310 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-кофейное с кусочками шоколада</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-кофейное с кусочками шоколада"></p>
                     </a>
                     <p>380 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
                     </a>
                     <p>355 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
                     </a>
                     <p>415 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
             </ul>
         </section>
@@ -128,19 +160,15 @@
             <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
             <ul class="features-list">
                 <li class="features-item">
-                    <img src="https://via.placeholder.com/49x49" alt="Мороженое">
                     <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
                 </li>
                 <li class="features-item">
-                    <img src="https://via.placeholder.com/49x49" alt="Листик">
                     <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
                 </li>
                 <li class="features-item">
-                    <img src="https://via.placeholder.com/49x49" alt="Корова">
                     <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                 </li>
                 <li class="features-item">
-                    <img src="https://via.placeholder.com/49x49" alt="Градусник">
                     <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                 </li>
             </ul>
@@ -172,7 +200,7 @@
                     <span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
                 </p>
                 <p>Для заказов по телефону:
-                    <span>8 812 450-25-25</span>
+                    <a href="tel:88124502525">8 812 450-25-25</a>
                     (с 10 до 20 ежедневно)
                 </p>
                 <a href="#">Форма обратной связи</a>
