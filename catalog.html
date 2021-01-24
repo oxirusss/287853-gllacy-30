@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <title>Glaccy Shop</title>
+    <title>Каталог Товаров</title>
 </head>
 
 <body>
     <header class="main-header">
         <nav class="main-navigation">
-            <div class="logo">
-                <a href="index.html"><img src="https://via.placeholder.com/154x64" alt="Логотип магазина"></a>
-            </div>
+            <a class="logo" href="index.html">
+                <img src="https://via.placeholder.com/154x64" alt="Логотип магазина">
+            </a>
             <ul class="site-navigation">
-                <li><a href="#">Каталог</a>
+                <li>
+                    <a href="catalog.html">Каталог</a>
                     <ul class="submenu-list">
                         <li><span>Новинки</span></li>
                         <li><a href="catalog.html">Сливочное</a></li>
@@ -25,15 +26,19 @@
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О компании</a></li>
             </ul>
+
+
             <ul class="user-navigation">
                 <li>
-                    <a href="#">
-                        <span class="visually-hidden">Поиск</span>
-                        <img src="https://via.placeholder.com/16x16" alt="Значок поиска">
-                    </a>
-                    <form action="https://echo.htmlacademy.ru" method="post">
-                        <label for="search-form">Поиск</label>
-                        <input type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                    <form action="https://echo.htmlacademy.ru" method="get">
+                        <button type="submit">
+                            <span class="visually-hidden">Поиск</span>
+                            <img src="https://via.placeholder.com/16x16" alt="Значок поиска">
+                        </button>
+                        <div>
+                            <label for="search-form">Поиск</label>
+                            <input type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                        </div>
                     </form>
                 </li>
                 <li>
@@ -41,13 +46,34 @@
                         <img src="https://via.placeholder.com/20x19" alt="Значок входа">
                         <span class="visually-hidden">Вход</span>
                     </a>
+                    <!--TODO
+                             Черновик разметки формы. Не уверенна, правильно обернуть пункты div или обычным p. 
+                              <form action="https://echo.htmlacademy.ru" method="post">
+                                 <a href="#">
+                        <img src="https://via.placeholder.com/20x19" alt="Значок входа">
+                        <span class="visually-hidden">Вход</span>
+                                    </a>
+                                  <div>
+                                      <label for="email-field" class="visually-hidden">Email</label>
+                                      <input type="email" name="email" id="email-field" placeholder="Электронная почта">
+                                      <label for="password-field" class="visually-hidden">Пароль</label>
+                                      <input type="password" name="password" id="password-field" placeholder="Пароль">
+                                      <button type="submit">Войти</button>
+                                  </div>
+                                  <div>
+                                      <p><a href="#">Забыли пароль?</a></p>
+                                      <p><a href="#">Новая регистрация</a></p>
+                                  </div>
+                              </form>
+                   -->
                 </li>
                 <li>
                     <a href="#">
                         <img src="https://via.placeholder.com/21x20" alt="Значок корзины">
-                        <span class="visually-hidden">2 товара</span>
+                        <span>n товаров</span>
                     </a>
                 </li>
+                <!-- TODO: здесь добавится корзина после 4й лекции -->
             </ul>
         </nav>
         <div class="breadcrumbs">
@@ -59,9 +85,18 @@
         </div>
         <div class="header-contacts">
             <p>с 10 до 20, ежедневно</p>
-            <p>8 812 450-25-25</p>
+            <a href="tel:88124502525">8 812 450-25-25</a>
         </div>
     </header>
+
+
+
+
+
+
+
+
+
 
     <main>
         <h1>Сливочное мороженое</h1>
@@ -87,16 +122,16 @@
                     <legend>Жирность:</legend>
                     <ul>
                         <li>
-                            <input type="radio" name="fat-facts" value="0%" id="zero-fat">
+                            <input type="radio" name="fat-facts" value="0" id="zero-fat">
                             <label for="zero-fat">0%</label>
                         </li>
-                        <li><input type="radio" name="fat-facts" value="до 10%" id="ten-fat" checked>
+                        <li><input type="radio" name="fat-facts" value="10" id="ten-fat" checked>
                             <label for="ten-fat">до 10%</label>
                         </li>
-                        <li><input type="radio" name="fat-facts" value="до 30%" id="thirty-fat">
+                        <li><input type="radio" name="fat-facts" value="30" id="thirty-fat">
                             <label for="thirty-fat">до 30%</label>
                         </li>
-                        <li><input type="radio" name="fat-facts" value="выше 30%" id="more-fat">
+                        <li><input type="radio" name="fat-facts" value="40" id="more-fat">
                             <label for="more-fat">выше 30%</label>
                         </li>
                     </ul>
@@ -105,20 +140,20 @@
                     <legend>Наполнители:</legend>
                     <ul>
                         <li>
-                            <input type="checkbox" name="chocolate" id="filter-chocolate" checked>
+                            <input type="checkbox" name="filter-taste" id="filter-chocolate" value="шоколадные" checked>
                             <label for="filter-chocolate">шоколадные</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="powdered-sugar" id="filter-powdered-sugar" checked>
+                            <input type="checkbox" name="filter-taste" id="filter-powdered-sugar" value="сахарные присыпки" checked>
                             <label for="filter-powdered-sugar">сахарные присыпки</label>
                         </li>
-                        <li><input type="checkbox" name="fruits" id="filter-fruits">
+                        <li><input type="checkbox" name="filter-taste" id="filter-fruits" value="фрукты">
                             <label for="filter-fruits">фрукты</label>
                         </li>
-                        <li><input type="checkbox" name="syrups" id="filter-syrup">
+                        <li><input type="checkbox" name="filter-taste" id="filter-syrup" value="сиропы">
                             <label for="filter-syrup">сиропы</label>
                         </li>
-                        <li><input type="checkbox" name="jams" id="filter-jams">
+                        <li><input type="checkbox" name="filter-taste" id="filter-jams" value="джемы">
                             <label for="filter-jams">джемы</label>
                         </li>
                     </ul>
@@ -135,84 +170,84 @@
                         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                     </a>
                     <p>310 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-кофейное с кусочками шоколада</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-кофейное с кусочками шоколада"></p>
                     </a>
                     <p>380 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
                     </a>
                     <p>355 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
                     </a>
                     <p>415 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное с брусничным джемом</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt=""></p>
                     </a>
                     <p>325 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-черничное с цельными ягодами черники</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочное с брусничным джемом"></p>
                     </a>
                     <p>410 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-лимонное с карамельной присыпкой</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-лимонное с карамельной присыпкой"></p>
                     </a>
                     <p>315 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное с шоколадной стружкой</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочное с шоколадной стружкой"></p>
                     </a>
                     <p>320 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-ванильное с кусочками шоколада</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-ванильное с кусочками шоколада"></p>
                     </a>
                     <p>440 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочноe с ментоловым сиропом</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочноe с ментоловым сиропом"></p>
                     </a>
                     <p>435 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное с кусочками черного шоколада</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочное с кусочками черного шоколада"></p>
                     </a>
                     <p>355 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное с мятным сиропом</h3>
                         <p><img src="https://via.placeholder.com/267x267" alt="Сливочное с мятным сиропом"></p>
                     </a>
                     <p>420 ₽<span>/кг</span></p>
-                    <button type="button">Быстрый просмотр</button>
+                    <a href="#">Быстрый просмотр</a>
                 </li>
             </ul>
             <ul class="pagination-list">
