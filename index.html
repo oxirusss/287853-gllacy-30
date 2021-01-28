@@ -4,13 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>Магазин мороженного Глейси</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/152.svg">
+    <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
     <header class="main-header">
         <nav class="main-navigation">
             <a class="logo" href="#">
-                <img src="https://via.placeholder.com/154x64" alt="Логотип магазина">
+                <img src="img/logo.svg" alt="Логотип магазина мороженного Глейси" width="154" height="64">
             </a>
             <ul class="site-navigation">
                 <li>
@@ -26,50 +30,39 @@
                 <li><a href="#">Доставка и оплата</a></li>
                 <li><a href="#">О компании</a></li>
             </ul>
-
-
             <ul class="user-navigation">
                 <li>
                     <form action="https://echo.htmlacademy.ru" method="get">
                         <button type="submit">
                             <span class="visually-hidden">Поиск</span>
-                            <img src="https://via.placeholder.com/16x16" alt="Значок поиска">
+                            <!--<img src="https://via.placeholder.com/16x16" alt="Значок поиска">-->
                         </button>
+                        <label for="search-form">Поиск</label>
+                        <input type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                    </form>
+                </li>
+                <li>
+                    <form action="https://echo.htmlacademy.ru" method="post">
+                        <a href="#">
+                            <!--<img src="https://via.placeholder.com/20x19" alt="Значок входа">-->
+                            <span class="visually-hidden">Вход</span>
+                        </a>
                         <div>
-                            <label for="search-form">Поиск</label>
-                            <input type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                            <label for="email-field" class="visually-hidden">Email</label>
+                            <input type="email" name="email" id="email-field" placeholder="Электронная почта">
+                            <label for="password-field" class="visually-hidden">Пароль</label>
+                            <input type="password" name="password" id="password-field" placeholder="Пароль">
+                            <button type="submit">Войти</button>
+                        </div>
+                        <div>
+                            <p><a href="#">Забыли пароль?</a></p>
+                            <p><a href="#">Новая регистрация</a></p>
                         </div>
                     </form>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="https://via.placeholder.com/20x19" alt="Значок входа">
-                        <span class="visually-hidden">Вход</span>
-                    </a>
-                    <!--TODO
-                             Черновик разметки формы. Не уверенна, правильно обернуть пункты div или обычным p. 
-                              <form action="https://echo.htmlacademy.ru" method="post">
-                                 <a href="#">
-                        <img src="https://via.placeholder.com/20x19" alt="Значок входа">
-                        <span class="visually-hidden">Вход</span>
-                                    </a>
-                                  <div>
-                                      <label for="email-field" class="visually-hidden">Email</label>
-                                      <input type="email" name="email" id="email-field" placeholder="Электронная почта">
-                                      <label for="password-field" class="visually-hidden">Пароль</label>
-                                      <input type="password" name="password" id="password-field" placeholder="Пароль">
-                                      <button type="submit">Войти</button>
-                                  </div>
-                                  <div>
-                                      <p><a href="#">Забыли пароль?</a></p>
-                                      <p><a href="#">Новая регистрация</a></p>
-                                  </div>
-                              </form>
-                   -->
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="https://via.placeholder.com/21x20" alt="Значок корзины">
+                        <!--<img src="https://via.placeholder.com/21x20" alt="Значок корзины">-->
                         <span class="visually-hidden">Пусто</span>
                     </a>
                 </li>
@@ -80,9 +73,6 @@
             <a href="tel:88124502525">8 812 450-25-25</a>
         </div>
     </header>
-
-
-
 
     <main>
         <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
@@ -114,7 +104,6 @@
                 <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a href="#">Хочу варенье!</a>
             </article>
-
             <article class="offers-chocolate">
                 <h3>Шоколадки даром!</h3>
                 <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
@@ -126,7 +115,7 @@
             <ul class="hits-list">
                 <li>
                     <a href="#">
-                        <p><img src="https://via.placeholder.com/267x267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></p>
+                        <p><img src="img/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p>
                         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                     </a>
                     <p>310 ₽<span>/кг</span></p>
@@ -134,21 +123,21 @@
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-кофейное с кусочками шоколада</h3>
-                        <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-кофейное с кусочками шоколада"></p>
+                        <p><img src="img/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p>
                     </a>
                     <p>380 ₽<span>/кг</span></p>
                     <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                        <p><img src="https://via.placeholder.com/267x267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></p>
+                        <p><img src="img/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
                     </a>
                     <p>355 ₽<span>/кг</span></p>
                     <a href="#">Быстрый просмотр</a>
                 </li>
                 <li><a href="#">
                         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-                        <p><img src="https://via.placeholder.com/267x267" alt="Сливочное крем-брюле с карамельной подливкой"></p>
+                        <p><img src="img/item-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
                     </a>
                     <p>415 ₽<span>/кг</span></p>
                     <a href="#">Быстрый просмотр</a>
@@ -178,7 +167,6 @@
             <article class="news">
                 <h3>Новое в нашем блоге</h3>
                 <p><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
-
             </article>
             <section class="subscription">
                 <h3 class="visually-hidden">Оформить подписку</h3>
@@ -193,7 +181,7 @@
         <section class="contacts">
             <h2 class="visually-hidden">Как нас найти</h2>
             <div class="contacts-map">
-                <img src="https://via.placeholder.com/1200x430" alt="Карта">
+                <img src="img/map-bg.jpg" alt="Карта" width="1200" height="430">
             </div>
             <div class="contacts-address">
                 <p>Адрес главного офиса<br> и офлайн-магазина:
@@ -228,7 +216,7 @@
         </div>
         <div class="copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <img src="https://via.placeholder.com/108x39" alt="Логотип HTML Академии"></a>
+                <img src="img/academy-logo.svg" alt="Логотип HTML Академии" width="108" height="39"></a>
             <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy © 2019</a></p>
         </div>
     </footer>
