@@ -1,0 +1,416 @@
+/* Variables */
+:root {
+    /*text*/
+    --text-dark: #323232;
+    --text-medium: #5A5A5A;
+    --text-light: #FFFFFF;
+    /*buttons*/
+    --button-simple: #F26843;
+    /*submenu links*/
+    --link-menu-current: #D07058;
+    --link-menu-hover: #FBDED7;
+    --link-menu-pressed: #F6B5A5;
+    /*all links*/
+    --link-hover: #FFBC9E;
+    --link-pressed: #E84D37;
+    /*backgrounds*/
+    --slider-one-dark: #849D8F;
+    --slider-one-light: #D7F2E3;
+    --slider-two-dark: #8996A6;
+    --slider-two-light: #DAE4EF;
+    --slider-three-dark: #9D8B84;
+    --slider-three-light: #EFE0DA;
+    --form-border-light: #B2B2B2;
+    --light-bg: #F8F7F4;
+}
+
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--text-light);
+    background-color: var(--slider-one-dark);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Header Navigation*/
+.main-navigation {
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.site-navigation,
+.user-navigation,
+.submenu-list {
+    list-style: none;
+
+}
+
+.site-navigation a,
+.user-navigation a {
+    color: var(--text-light);
+}
+
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+}
+
+.header-contacts {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.header-contacts a {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/*submenu*/
+.submenu-list {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--text-dark);
+}
+
+.submenu-list a:hover,
+.submenu-list a:focus {
+    background-color: var(--link-menu-hover);
+}
+
+.submenu-list a:focus {
+    background-color: var(--link-menu-pressed);
+}
+
+/*user-navigation*/
+.login-help a {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    color: var(--text-dark);
+}
+
+.login-help a:hover {
+    color: var(--link-pressed);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.button-login {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Sliders*/
+.slider-list {
+    list-style: none;
+
+}
+
+.sliders h3 {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.slider-button {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Offers*/
+.offers-raspberry h3,
+.offers-chocolate h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 41px;
+}
+
+.offers-raspberry,
+.offers-chocolate {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.offers-raspberry {
+    background-image: url("../img/backgrounds/raspberry-bg.jpg");
+    background-repeat: no-repeat;
+}
+
+.offers-chocolate {
+    background-image: url("../img/backgrounds/chocolate-bg.jpg");
+    background-repeat: no-repeat;
+}
+
+.offers-raspberry a,
+.offers-chocolate a {
+    line-height: 24px;
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+.offers-raspberry a:hover,
+.offers-chocolate a:hover {
+    /* how to make gradient with root colors*/
+}
+
+/*Hits*/
+.hits-list {
+    list-style: none;
+}
+
+.hits-item h3 {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.item-price {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.item-price span {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.hits-item .button {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Features*/
+.features {
+    background-image: url(../img/backgrounds/waffle-bg.jpg);
+}
+
+.features .intro {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.features-list {
+    list-style: none;
+    color: var(--text-dark);
+}
+
+/*News and Subscription*/
+.news h3 {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.news-link a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+
+.news-link a:hover {
+    color: var(--link-pressed);
+}
+
+.news {
+    background-image: url(../img/backgrounds/blog-bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.subscription p {
+    color: var(--text-medium);
+}
+
+.subscription-item input {
+    border: 1px solid var(--form-light);
+}
+
+.subscription-form button {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Contacts*/
+.contacts-address p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--text-dark);
+}
+
+.contacts-address span,
+.contacts-phone {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.contacts-address .button {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Main Footer*/
+.social-list,
+.info-list-right,
+.info-list-left {
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    list-style: none;
+}
+
+.social-list a,
+.info-list-right a,
+.info-list-left a,
+.copyright-link a {
+    color: var(--text-light);
+}
+
+.social-list a:hover,
+.info-list-right a:hover,
+.info-list-left a:hover,
+.copyright-link a:hover {
+    color: var(--link-hover);
+}
+
+/*Modal*/
+.modal-feedback {
+    color: var(--text-dark);
+    background-color: var(--light-background);
+}
+
+.modal-feedback h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    border: 1px solid var(--form-light);
+}
+
+.feedback-form button {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Catalog Page*/
+/*Cart*/
+.full-cart-table {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.total-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.cart-container .button-order {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+.cart-container .button-order:hover {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+/*Не могу найти ошибку которая не даёт корректно прописать эффект наведения */
+
+/*Breadcrumbs*/
+.breadcrumbs-list {
+    list-style: none
+}
+
+.breadcrumbs-list a {
+    color: var(--text-light);
+}
+
+.breadcrumbs-list a:hover,
+.breadcrumbs-list a:focus {
+    color: var(--link-hover);
+}
+
+/*filters*/
+.filter legend {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.filter fieldset {
+    border: 0 none;
+}
+
+
+/*Catalog items*/
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item h3 {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.item-price {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.item-price span {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.catalog-item .button {
+    color: var(--text-light);
+    background-color: var(--button-simple);
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-list a {
+    color: var(--text-light)
+}
+.pagination-list a:hover {
+    color:var(--text-dark);
+    background-color: var(--text-light);
+}
