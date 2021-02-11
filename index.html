@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <header class="header">
+        <header class="header">
+        <div class="container">
         <nav class="header_navigation">
             <a class="header_logo" href="#">
                 <img src="./img/logos/logo.svg" alt="Логотип магазина мороженного Глейси" width="154" height="64">
@@ -88,9 +89,11 @@
             <p class="header__contacts-info">с 10 до 20, ежедневно</p>
             <a class="header__contacts-phone" href="tel:88124502525">8 812 450-25-25</a>
         </div>
-    </header>
-    <main class="container">
-        <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
+        </div>
+       </header>
+   <main>
+       <div class="container">
+       <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
         <section class="sliders">
             <ul class="sliders__sliders-list">
                 <li class="sliders__sliders-list-item">
@@ -114,6 +117,7 @@
         </section>
         <section class="offers">
             <h2 class="visually-hidden">Спецпредложения</h2>
+            <div class="offers__wrapper">
             <article class="offers__raspberry-offer">
                 <h3 class="offers__raspberry-offer-title">Малинка даром!</h3>
                 <p class="offers__raspberry-offer-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -124,13 +128,14 @@
                 <p class="offers__chocolate-offer-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                 <a class="offers__chocolate-offer-button" href="#">Хочу шоколадки!</a>
             </article>
+            </div>
         </section>
         <section class="hits">
             <h2 class="visually-hidden">Хиты продаж</h2>
             <ul class="hits__hits-list">
                 <li class="hits__hits-list-item">
                     <a class="hits__hits-list-item-link" href="#">
-                        <p><img src="./img/catalog/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p>
+                        <p><img class="hits__hits-list-item-image" src="./img/catalog/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p>
                         <h3 class="hits__hits-list-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                     </a>
                     <p class="hits__hits-list-item-price">310 ₽<span class="hits__hits-list-item-price-kg">/кг</span></p>
@@ -138,24 +143,25 @@
                 </li>
                 <li class="hits__hits-list-item">
                     <a class="hits__hits-list-item-link" href="#">
+                        <p><img class="hits__hits-list-item-image" src="./img/catalog/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p>
                         <h3 class="hits__hits-list-item-title">Сливочно-кофейное с кусочками шоколада</h3>
-                        <p><img src="./img/catalog/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p>
                     </a>
                     <p class="hits__hits-list-item-price">380 ₽<span class="hits__hits-list-item-price-kg">/кг</span></p>
                     <a class="hits__hits-list-item-button" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="hits__hits-list-item">
                     <a class="hits__hits-list-item-link" href="#">
+
+                        <p><img class="hits__hits-list-item-image" src="./img/catalog/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
                         <h3 class="hits__hits-list-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                        <p><img src="./img/catalog/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
                     </a>
                     <p class="hits__hits-list-item-price">355 ₽<span class="hits__hits-list-item-price-kg">/кг</span></p>
                     <a class="hits__hits-list-item-button" href="#">Быстрый просмотр</a>
                 </li>
                 <li class="hits__hits-list-item">
                     <a class="hits__hits-list-item-link" href="#">
+                        <p><img class="hits__hits-list-item-image" src="./img/catalog/item-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
                         <h3 class="hits__hits-list-item-title">Сливочное крем-брюле с карамельной подливкой</h3>
-                        <p><img src="./img/catalog/item-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
                     </a>
                     <p class="hits__hits-list-item-price">415 ₽<span class="hits__hits-list-item-price-kg">/кг</span></p>
                     <a class="hits__hits-list-item-button" href="#">Быстрый просмотр</a>
@@ -181,7 +187,10 @@
             </ul>
         </section>
         <section class="news-and-subscription">
-            <h2 class="visually-hidden">Новости и Подписка</h2>
+<!--
+            <h2 class="visually-hidden">Новости и Подписка</h2> 
+           Убрала в коммент что бы не ехала грид сетка)
+-->
             <article class="news-and-subscription__news">
                 <h3 class="news-and-subscription__news-title">Новое в нашем блоге</h3>
                 <p>
@@ -216,8 +225,10 @@
                 <a class="contacts__button" href="#">Форма обратной связи</a>
             </div>
         </section>
+       </div>
     </main>
     <footer class="footer">
+      <div class="container">
         <div class="footer__socials">
             <ul class="footer__socials-list">
                 <li class="footer__socials-list-item">
@@ -283,6 +294,7 @@
                 <img src="./img/logos/academy-logo.svg" alt="Логотип HTML Академии" width="108" height="39"></a>
             <p>Сделано в <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>© 2019</p>
         </div>
+        </div>
     </footer>
     <section class="modal-feedback">
         <h2 class="modal-feedback-title">Мы обязательно вам ответим!</h2>
@@ -304,5 +316,4 @@
         </form>
     </section>
 </body>
-
 </html>

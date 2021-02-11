@@ -52,30 +52,50 @@
 
 /* Global */
 body {
-    margin: 0;
-    padding: 0;
+    min-width: 1200px;
+    margin:0;
+    padding:0;
     font-family: var(--main-font);
     font-size: var(--font-body);
     line-height: var(--ln-body);
     font-weight: var(--font-weight-regular);
     color: var(--text-light);
     background-color: var(--slider-one-dark);
+    min-height: 100%;
+    display:grid;
+	grid-template-rows: min-content 1fr min-content;
+    
 }
+
 
 img {
     max-width: 100%;
     height: auto;
 }
 
+/*Container*/
+.container {
+width:1146px;
+margin: 0 auto;
+}
+
 /*Header*/
-/*site navigation*/
+.header {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 20px;
+}
+
 .header_navigation {
     font-size: 16px;
     font-weight: var(--font-weight-bold);
     line-height: 18px;
+    display: grid;
+    grid-template-columns: 154px 1fr auto;
 }
 
 .header__site-navigation {
+    padding-left:24px;
     list-style: none;
 }
 
@@ -134,6 +154,11 @@ img {
     text-decoration: none;
 }
 
+.header__contacts {
+    justify-self: end;
+    /*Не срабатывает.*/
+}
+
 .header__contacts-info {
     font-size: 14px;
     font-weight: var(--font-weight-bold);
@@ -172,11 +197,23 @@ img {
 .offers {
     font-size: 18px;
     font-weight: var(--font-weight-bold);
+    margin-bottom: 
+}
+.offers__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 26px;
+    margin:0;
+	padding:0;
 }
 .offers__raspberry-offer {
     background-image: url("../img/backgrounds/raspberry-bg.jpg");
     background-repeat: no-repeat;
     background-size:560px 229px;
+    border-radius: 16px;
+    padding-left: 16px;
+    padding-right: 30px;
+    
 }
 .offers__raspberry-offer-title {
     font-size: 35px;
@@ -195,6 +232,9 @@ img {
     background-image: url("../img/backgrounds/chocolate-bg.jpg");
     background-repeat: no-repeat;
     background-size:560px 229px; 
+    border-radius: 16px;
+    padding-left: 16px;
+    padding-right: 30px;
 }
 .offers__chocolate-offer-title {
     font-size: 35px;
@@ -210,22 +250,33 @@ img {
     background-color: var(--button-simple);
 }
                                             /*Hits*/
-.hits__hits-list {
-   list-style: none;
+.hits {
+    margin-bottom: 40px;
 }
-/*Пыталась отключить у h3 подчеркивание,  выходит только если прописать такой путь. Правильно ли будет так оставить?*/
-.hits__hits-list-item .hits__hits-list-item-link {
+.hits__hits-list {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 26px;
+    list-style: none;
+}
+.hits__hits-list-item-link {
     text-decoration: none;
+}
+.hits__hits-list-item-image {
+    border-radius:50%;
 }
 .hits__hits-list-item-title {
     color: var(--text-light);
     font-size: 16px;
     font-weight: var(--font-weight-medium);
+    text-align: center;
 }
 .hits__hits-list-item-price {
     font-size: 45px;
     line-height: 45px;
     font-weight: var(--font-weight-bold);
+    margin: 0;
+	padding: 0;
 }
 .hits__hits-list-item-price-kg {
     font-size: 30px;
@@ -245,8 +296,10 @@ img {
 .features {
    color: var(--text-dark);
   background-image: url(../img/backgrounds/waffle-bg.jpg);
-  background-repeat: no-repeat;
+  background-repeat:repeat;
   background-size: 1146px 306px; 
+  border-radius:16px;
+  margin-bottom: 40px;
 } 
 .features__intro {
     font-size: 24px;
@@ -257,10 +310,18 @@ img {
     list-style: none;
 }
                             /*News and Subscription*/
+.news-and-subscription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+	grid-column-gap: 26px
+    
+}
 .news-and-subscription__news {
   color: var(--text-dark); 
     background-image: url(../img/backgrounds/blog-bg.jpg);
     background-repeat: no-repeat;
+    border-radius: 16px;
+	padding-left: 20px;
     background-size: 560px 220px; 
 }
 .news-and-subscription__news-title {
@@ -271,6 +332,13 @@ img {
     font-weight: var(--font-weight-bold);
     line-height: 30px;
     color: var(--text-dark); 
+}
+.news-and-subscription__subscription {
+    border:8px solid white;
+	border-image: url("../img/backgrounds/subscription-bg.svg") 10 round round;
+    background-color: var(--white);
+	border-radius:16px;
+	padding-left: 20px;
 }
 .news-and-subscription__subscription-text {
     color:var(--text-medium);
@@ -286,6 +354,13 @@ img {
     font-size: 14px;
     line-height: 20px;
     color: var(--text-dark);
+}
+.contacts__address {
+    background-color: var(--white);
+    border-radius: 16px;
+    width: 303px;
+	height: 306px;
+    padding: 32px 25px;
 }
 .contacts__address-text-special {
     font-size: 18px;
@@ -312,13 +387,33 @@ img {
     font-size: 13px;
     line-height: 18px;
 }
+.footer .container {
+      display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+}
+.footer__socials {
+    width: 164px;
+}
+
+.footer__service-info {
+    width: 327px;
+    justify-self: center;
+}
+
+.footer__copyright {
+    width: 190px;
+    justify-self: end;
+}
+
 .footer__socials-list {
     list-style: none;
 }
+
 .footer__socials-list-button {
-  color: var(--text-light);
+    color: var(--text-light);
     text-decoration: none;
 }
+
 .footer__service-info-list-right {
      list-style: none;
 }
