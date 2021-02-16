@@ -12,8 +12,7 @@
 </head>
 
 <body>
-    <header class="header">
-       <div class="header__wrapper">
+    <header class="header container">
         <nav class="header__navigation">
             <a class="header__logo" href="index.html">
                 <img src="./img/logos/logo.svg" alt="Логотип магазина мороженного Глейси" width="154" height="64">
@@ -105,30 +104,27 @@
                 </li>
             </ul>
         </nav>
-        <div class="wrapper-catalog">
-            <!-- Временное решение :)-->
-            <div class="header__breadcrumbs">
-                <ul class="header__breadcrumbs-list">
-                    <li class="header__breadcrumbs-list-item">
-                        <a class="header__breadcrumbs-list-item-link" href="index.html">Главная</a>
-                    </li>
-                    <li class="header__breadcrumbs-list-item">
-                        <a class="header__breadcrumbs-list-item-link" href="catalog.html">Каталог</a>
-                    </li>
-                    <li class="header__breadcrumbs-list-item-deadend">
-                        <a class="header__breadcrumbs-list-item-link" href="#">Сливочное</a>
-                    </li>
-                </ul>
-            </div>
+    </header>
+
+    <main class="container">
+        <h1 class="catalog-title">Сливочное мороженое</h1>
+        <div class="breadcrumbs-and-contacts">
+            <ul class="header__breadcrumbs-list">
+                <li class="header__breadcrumbs-list-item">
+                    <a class="header__breadcrumbs-list-item-link" href="index.html">Главная</a>
+                </li>
+                <li class="header__breadcrumbs-list-item">
+                    <a class="header__breadcrumbs-list-item-link" href="catalog.html">Каталог</a>
+                </li>
+                <li class="header__breadcrumbs-list-item-deadend">
+                    <a class="header__breadcrumbs-list-item-link" href="#">Сливочное</a>
+                </li>
+            </ul>
             <div class="header__contacts">
                 <p class="header__contacts-info">с 10 до 20, ежедневно</p>
                 <a class="header__contacts-phone" href="tel:88124502525">8 812 450-25-25</a>
             </div>
         </div>
-        </div>
-    </header>
-    <main class="container__inner">
-        <h1 class="catalog-title">Сливочное мороженое</h1>
         <section class="filters">
             <h2 class="visually-hidden">Фильтры для поиска</h2>
             <form class="filters__filters-form" method="get" action="https://echo.htmlacademy.ru">
@@ -311,8 +307,7 @@
             </ul>
         </section>
     </main>
-    <footer class="footer">
-       <div class="footer__container">
+    <footer class="footer container">
         <div class="footer__socials">
             <ul class="footer__socials-list">
                 <li class="footer__socials-list-item">
@@ -379,7 +374,6 @@
             <a href="https://htmlacademy.ru/intensive/htmlcss">
                 <img src="./img/logos/academy-logo.svg" alt="Логотип HTML Академии" width="108" height="39"></a>
             <p>Сделано в <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>© 2019</p>
-        </div>
         </div>
     </footer>
     <section class="modal-feedback">
