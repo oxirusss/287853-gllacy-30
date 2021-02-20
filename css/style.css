@@ -71,11 +71,15 @@ body {
     line-height: var(--ln-body);
     font-weight: var(--font-weight-regular);
     color: var(--text-light);
-    background-color: var(--slider-one-dark);
     min-height: 100%;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
+}
+.site-wrapper {
+    min-width:940px;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 img {
@@ -176,7 +180,8 @@ img {
     margin-right: 10px;
 }
 
-.header__user-navigation-user-login {
+.header__user-navigation-user-login .header__user-navigation-user-login-form-link {
+    display: block;
     margin-right: 10px;
 }
 
@@ -202,6 +207,9 @@ img {
 .header__user-navigation-user-cart-empty {
     color: var(--text-light);
     text-decoration: none;
+    display: block;
+    padding: 8px 20px 8px 45px;
+    /*check px left*/
 }
 
 .header__contacts-info {
@@ -251,17 +259,45 @@ img {
 }
 
                                     /*Sliders*/
+.sliders {
+    position: relative;
+    padding-top: 321px;
+    margin-bottom: 41px;
+    text-align: center;
+}
+
+.site-wrapper-one {
+    background-color: var(--slider-one-dark);
+    background-image: url(../img/sliders/slider-1.png);
+}
+
+.site-wrapper-two {
+    background-color: var(--slider-two-dark);
+    background-image: url(../img/sliders/slider-2.png);
+}
+
+.site-wrapper-three {
+    background-color: var(--slider-three-dark);
+    background-image: url(../img/sliders/slider-3.png);
+}
+
 .sliders__sliders-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .sliders__sliders-list-item-title {
+    width: 700px;
     font-size: 60px;
     line-height: 60px;
     font-weight: var(--font-weight-bold);
+    margin: 0 auto;
+    margin-bottom: 27px;
 }
 
 .sliders__sliders-list-item-button {
+    display: inline-block; /*Не очень поняла зачем в лекции так сделали*/
     font-size: 32px;
     line-height: 44px;
     font-weight: var(--font-weight-bold);
@@ -270,18 +306,46 @@ img {
     background-image: var(--button-rest);
     padding: 9px 23px;
     border-radius: 70px;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*move to root*/
+    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-.sliders__sliders-pagination {
-    list-style: none;
+.sliders__sliders-controls {
+    position: absolute;
+    bottom: 63px;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    width: 67px;
+    justify-content: space-between;
+}
+.sliders__sliders-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sliders__sliders-controls .sliders__sliders-controls-button-current {
+    background-color: #ffffff; /*move to root*/
+}
+.slide {
+    display: none;
+}
+.slide-current {
+     display: block;
 }
 /*sliders buttons behaviour*/
-.sliders__sliders-list-item-button:hover {
-    background-image: var(--button-hover);
-}
-
+.sliders__sliders-list-item-button:hover,
 .sliders__sliders-list-item-button:focus {
+    background-image: var(--button-hover);
+    box-shadow: 0px 2px 2px #AC1000;
+}
+ .sliders__sliders-list-item-button:active {
     background-image: var(--button-pressed);
+     box-shadow: inset 0px 2px 2px #942718;
 }
 
                                     /*Offers*/
@@ -645,7 +709,7 @@ img {
     line-height: 18px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 1146px;
+    width: 1146px;/*move to root*/
     margin: 0 auto;
     margin-top: 18px;
 }
@@ -867,6 +931,9 @@ img {
     padding: 0;
 }
                                     /*Catalog*/
+.site-wrapper-catalog {
+    background-color: var(--slider-one-dark);
+}
 .catalog {
     margin-bottom: 30px;
 }
@@ -943,6 +1010,7 @@ img {
     font-size: 16px;
     margin-left: 20px;
 }
+
 /*catalog buttons behaviour*/
 .catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
@@ -950,4 +1018,86 @@ img {
 
 .catalog__catalog-list-item-button:focus {
     background-image: var(--button-pressed);
+}
+
+/*Расположи по  разделам кода. Ниже задание по декор элементам*/
+/*check the search button, cant understand how to do*/
+.header__user-navigation-user-login-form .header__user-navigation-user-login-form-link {
+    position: relative;
+    padding: 8px 16px 8px 44px;
+}
+
+.header__user-navigation-user-login-form-link::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    /*check top px!!!*/
+    left: 16px;
+    width: 20px;
+    height: 19px;
+    background-image: url("../img/icons/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.header__user-navigation-user-login-form-link:hover::before,
+.header__user-navigation-user-login-form-link:focus::before,
+.header__user-navigation-user-login-form-link:active::before {
+    background-image: url("../img/icons/login-dark.svg");
+}
+
+.header__user-navigation-user-cart .header__user-navigation-user-cart-empty {
+    position: relative;
+    padding: 8px 16px 8px 45px;
+}
+
+.header__user-navigation-user-cart-empty::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/icons/basket-empty.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+/*hits experiments*/
+.hits__hits-list-item {
+    position: relative;
+}
+
+.hits__hits-list-item-link::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    /*check top px!!!*/
+    left: 4px;
+    /*check top px!!!*/
+    width: 61px;
+    height: 61px;
+    background-image: url("../img/icons/hit.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+/*features experiments*/
+.features__features-list-item {
+    position: relative;
+    max-width: 485px;
+}
+
+.features__features-list-item-text::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    /*check top px!!!*/
+    left: 1px;
+    /*check px!!!*/
+    width: 49px;
+    height: 49px;
+    background-image: url("../img/icons/feature-1.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
