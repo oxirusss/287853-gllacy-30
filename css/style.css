@@ -59,6 +59,7 @@
     --light-form-bg: var(--light-yellow);
     --light-background: var(--white);
     --border-transparant:  1px solid rgba(255, 255, 255, 0.2);
+    --accent-color: rgba(255, 255, 255, 0.2);
 }
 
                                     /* Global */
@@ -76,8 +77,9 @@ body {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
 }
+
 .site-wrapper {
-    min-width:940px;
+    min-width: 940px;
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -90,6 +92,7 @@ img {
 .container {
     width: var(--container-width);
     margin: 0 auto;
+    padding: 0 27px;
 }
 
 .visually-hidden {
@@ -101,7 +104,6 @@ img {
     width: 1px;
     overflow: hidden;
 }
-
                                     /*Header*/
 .header {
     display: grid;
@@ -112,7 +114,13 @@ img {
 
 .header__contacts {
     justify-self: end;
+    /*margin: 0 0 -40px auto; can we do like that */
+    padding: 0;
+}
+
+.header__contacts-info {
     margin: 0;
+    padding: 0 0 8px 17px;
 }
 
 .header__navigation {
@@ -120,21 +128,29 @@ img {
     font-weight: var(--font-weight-bold);
     line-height: 18px;
     display: flex;
-    align-items: flex-start;
-    padding-top: 14px;
-    padding-bottom: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 9px;
 }
 
 .header__site-navigation {
     list-style: none;
-    padding: 14px 0;
+    padding: 9px 0;
+    /* do we need this padding?*/
     margin: 0 0 0 24px;
+    /*too big margin?*/
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.header__site-navigation-item {
+.header__logo {
+    height: 64px;
+
+}
+
+.header__site-navigation-item:not(:last-child) {
     margin-right: 32px;
 }
 
@@ -170,24 +186,23 @@ img {
     line-height: 16px;
     list-style: none;
     margin: 0 0 0 auto;
-    padding: 14px 0;
+    padding: 9px 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .header__user-navigation-user-search {
     margin-right: 10px;
 }
 
-.header__user-navigation-user-login .header__user-navigation-user-login-form-link {
+.header__user-navigation-user-login-form-link {
     display: block;
     margin-right: 10px;
-}
-
-.header__user-navigation-user-login-form-link {
     color: var(--text-light);
     text-decoration: none;
+    padding: 8px 16px 8px 44px;
 }
 
 .header__user-navigation-user-login-form-button-login {
@@ -208,8 +223,12 @@ img {
     color: var(--text-light);
     text-decoration: none;
     display: block;
-    padding: 8px 20px 8px 45px;
+    padding: 8px 20px 8px 44px;
     /*check px left*/
+}
+.header__user-navigation-user-cart-full {
+    display: block;
+    padding: 8px 20px 8px 45px; 
 }
 
 .header__contacts-info {
@@ -269,6 +288,7 @@ img {
 .site-wrapper-one {
     background-color: var(--slider-one-dark);
     background-image: url(../img/sliders/slider-1.png);
+    background-repeat: no-repeat;
 }
 
 .site-wrapper-two {
@@ -295,9 +315,8 @@ img {
     margin: 0 auto;
     margin-bottom: 27px;
 }
-
 .sliders__sliders-list-item-button {
-    display: inline-block; /*Не очень поняла зачем в лекции так сделали*/
+    display: inline-block;
     font-size: 32px;
     line-height: 44px;
     font-weight: var(--font-weight-bold);
@@ -306,10 +325,10 @@ img {
     background-image: var(--button-rest);
     padding: 9px 23px;
     border-radius: 70px;
-    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*move to root*/
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    /*move to root*/
     box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
 }
-
 .sliders__sliders-controls {
     position: absolute;
     bottom: 63px;
@@ -319,23 +338,28 @@ img {
     width: 67px;
     justify-content: space-between;
 }
-.sliders__sliders-controls button {
-  padding: 0;
-  width: 17px;
-  height: 17px;
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
+
+.sliders__sliders-controls-button {
+    padding: 0;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
 }
-.sliders__sliders-controls .sliders__sliders-controls-button-current {
-    background-color: #ffffff; /*move to root*/
+
+.sliders__sliders-controls-button.current {
+    background-color: #ffffff;
+    /*move to root*/
 }
+
 .slide {
     display: none;
 }
+
 .slide-current {
-     display: block;
+    display: block;
 }
 /*sliders buttons behaviour*/
 .sliders__sliders-list-item-button:hover,
@@ -343,11 +367,11 @@ img {
     background-image: var(--button-hover);
     box-shadow: 0px 2px 2px #AC1000;
 }
- .sliders__sliders-list-item-button:active {
-    background-image: var(--button-pressed);
-     box-shadow: inset 0px 2px 2px #942718;
-}
 
+.sliders__sliders-list-item-button:active {
+    background-image: var(--button-pressed);
+    box-shadow: inset 0px 2px 2px #942718;
+}
                                     /*Offers*/
 .offers {
     font-size: 18px;
@@ -386,6 +410,7 @@ img {
 .offers__raspberry-offer-button-wrapper {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .offers__raspberry-offer-button {
@@ -423,6 +448,7 @@ img {
 .offers__chocolate-offer-button-wrapper {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .offers__chocolate-offer-button {
@@ -449,7 +475,6 @@ img {
 .offers__chocolate-offer-button:focus {
     background-image: var(--button-pressed);
 }
-
                                     /*Hits*/
 .hits {
     margin-bottom: 40px;
@@ -482,8 +507,7 @@ img {
     color: var(--text-light);
     font-size: 16px;
     font-weight: var(--font-weight-medium);
-    display: inline;
-    border-bottom: var(--border-transparant);
+    /*    text-decoration: underline;*/
     margin: 0;
 }
 
@@ -501,7 +525,6 @@ img {
     line-height: 35px;
     font-weight: var(--font-weight-bold);
 }
-
 .hits__hits-list-item-button {
     font-size: 18px;
     line-height: 24px;
@@ -536,21 +559,19 @@ img {
     font-size: 24px;
     line-height: 30px;
     font-weight: var(--font-weight-medium);
-    margin: 0;
-    margin-bottom: 21px;
+    margin: 0 0 21px;
 }
 
 .features__features-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 27px;
 }
 
 .features__features-list-item {
-    max-width: 482px;
-    margin: 0;
     margin-bottom: 33px;
     padding-left: 56px;
 }
@@ -606,15 +627,15 @@ img {
 .news-and-subscription__subscription-text {
     color: var(--text-medium);
     padding: 0;
-    margin: 0;
-    margin-bottom: 47px;
+    margin: 0 0 47px;
 }
 
 .news-and-subscription__subscription-form {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     margin: 0;
-    width: 498px;
+    width: 100%;
 }
 
 .news-and-subscription__subscription-form-button {
@@ -624,6 +645,7 @@ img {
     background-image: var(--button-rest);
     border-radius: 50px;
     padding: 10px 19px;
+    font-weight: var(--font-weight-bold);
 }
 
 .news-and-subscription__subscription-form-input {
@@ -701,43 +723,46 @@ img {
 .contacts__button:focus {
     background-image: var(--button-pressed);
 }
-
                                     /*Footer*/
 
 .footer {
     font-size: 13px;
     line-height: 18px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 1146px;/*move to root*/
-    margin: 0 auto;
-    margin-top: 18px;
+    padding: 18px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer__copyright {
-    justify-self: end;
+.footer__catalog {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 18px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer__socials {
     width: 164px;
 }
 
-.footer__service-info {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer__copyright {
-    width: 190px;
-}
-
 .footer__socials-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    /*  flex-wrap: wrap;*/
+}
+
+.footer__socials-list-item:not(:last-child) {
+    margin-right: 12px;
+}
+
+.footer__service-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .footer__socials-list-button {
@@ -747,6 +772,8 @@ img {
 
 .footer__service-info-list-right {
     list-style: none;
+    padding-right: 32px;
+    margin: 0;
 }
 
 .footer__service-info-link {
@@ -756,23 +783,23 @@ img {
 
 .footer__service-info-list-left {
     list-style: none;
-
+    padding: 0;
+    margin: 0;
 }
 
 .footer__copyright {
+    width: 190px;
     font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    line-height: 18px;
+}
+
+.footer__copyright-text {
+    margin: 0;
 }
 
 .footer__copyright-link {
     text-decoration: none;
     color: var(--text-light);
-}
-
-.footer__socials-list-item {
-    margin-right: 12px;
 }
 /*footer links and buttons behaviour*/
 .footer__service-info-link:hover {
@@ -797,7 +824,7 @@ img {
     font-weight: var(--font-weight-bold);
     text-decoration: none;
     color: var(--text-light);
-    background-color: var(--button-simple);
+    background-color: var(--accent-color);
 }
 
                                     /*Catalog Page*/
@@ -810,6 +837,7 @@ img {
 
 .catalog-title {
     order: 2;
+    margin-bottom: 29px;
 }
 
 .breadcrumbs-and-contacts {
@@ -879,7 +907,6 @@ img {
     color: var(--text-light);
     text-decoration: none;
 }
-
 /*header links and buttons behaviour*/
 .header__user-navigation-user-cart-table-order-button:hover {
     background-image: var(--button-hover);
@@ -896,7 +923,7 @@ img {
 .filters__filters-form {
     display: flex;
     flex-wrap: wrap;
-    width: 869px;
+    width: 80%;
     align-items: center;
     justify-content: space-between;
 }
@@ -920,6 +947,10 @@ img {
     padding: 0;
 }
 
+.filters__filters-form-fat-filter-list-item:not(:last-child) {
+    margin-right: 20px;
+}
+
 .filters__filters-form-taste-filter {
     border: none;
 }
@@ -930,12 +961,29 @@ img {
     margin: 0;
     padding: 0;
 }
+
+.filters__filters-form-taste-filter-list-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.filters__filters-form-button {
+    padding: 9px 29px;
+    text-align: center;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /*move to root*/
+}
                                     /*Catalog*/
 .site-wrapper-catalog {
     background-color: var(--slider-one-dark);
 }
+
 .catalog {
-    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+
 }
 
 .catalog__catalog-list {
@@ -943,7 +991,7 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 26px;
-    margin: 0;
+    margin: 0 0 80px;
     padding: 0;
 }
 
@@ -1010,7 +1058,6 @@ img {
     font-size: 16px;
     margin-left: 20px;
 }
-
 /*catalog buttons behaviour*/
 .catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
@@ -1020,9 +1067,8 @@ img {
     background-image: var(--button-pressed);
 }
 
-/*Расположи по  разделам кода. Ниже задание по декор элементам*/
-/*check the search button, cant understand how to do*/
-.header__user-navigation-user-login-form .header__user-navigation-user-login-form-link {
+/* Ниже задание по декор элементам-черновик*/
+/*.header__user-navigation-user-login-form-link {
     position: relative;
     padding: 8px 16px 8px 44px;
 }
@@ -1031,7 +1077,7 @@ img {
     content: "";
     position: absolute;
     top: 6px;
-    /*check top px!!!*/
+  
     left: 16px;
     width: 20px;
     height: 19px;
@@ -1063,7 +1109,7 @@ img {
     background-position: 0 0;
 }
 
-/*hits experiments*/
+
 .hits__hits-list-item {
     position: relative;
 }
@@ -1072,9 +1118,9 @@ img {
     content: "";
     position: absolute;
     top: 19px;
-    /*check top px!!!*/
+
     left: 4px;
-    /*check top px!!!*/
+/
     width: 61px;
     height: 61px;
     background-image: url("../img/icons/hit.svg");
@@ -1082,7 +1128,7 @@ img {
     background-position: 0 0;
 }
 
-/*features experiments*/
+
 .features__features-list-item {
     position: relative;
     max-width: 485px;
@@ -1092,12 +1138,11 @@ img {
     content: "";
     position: absolute;
     top: -14px;
-    /*check top px!!!*/
     left: 1px;
-    /*check px!!!*/
     width: 49px;
     height: 49px;
     background-image: url("../img/icons/feature-1.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+*/
