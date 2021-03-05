@@ -22,11 +22,11 @@
                     <li class="header__site-navigation-item catalog-item-link">
                         <a class="header__site-navigation-item-current" href="catalog.html">Каталог</a>
                         <ul class="header__site-navigation-catalog-submenu">
-                            <li class="header__site-navigation-catalog-submenu-item">
+                            <li class="header__site-navigation-catalog-submenu-item special-item">
                                 <a class="header__site-navigation-item-submenu-link-special" href="#">Новинки</a>
                             </li>
-                            <li class="header__site-navigation-catalog-submenu-item">
-                                <a class="header__site-navigation-item-submenu-link" href="catalog.html">Сливочное</a>
+                            <li class="header__site-navigation-catalog-submenu-item current-item">
+                                <a class="header__site-navigation-item-submenu-link-current" href="catalog.html">Сливочное</a>
                             </li>
                             <li class="header__site-navigation-catalog-submenu-item">
                                 <a class="header__site-navigation-item-submenu-link" href="#">Щербеты</a>
@@ -106,34 +106,31 @@
                         <div class="header__user-navigation-user-cart-container">
                             <ul class="header__user-navigation-user-cart-order">
                                 <li class="header__user-navigation-user-cart-order-item">
-                                    <a class="delete-button" href="#"><span class="visually-hidden">Удалить</span></a>
+                                   <button class="delete-button"><span class="visually-hidden">Удалить </span></button>
                                     <img class="header__user-navigation-user-cart-item-image" src="./img/catalog/item-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                                     <span class="header__user-navigation-user-cart-item-description">Пломбир с апельсиновым джемом</span>
                                     <b class="header__user-navigation-user-cart-item-weight">1,5 кг&times;<span class="header__user-navigation-user-cart-item-price-per-weight">200 руб</span></b>
                                     <span class="header__user-navigation-user-cart-item-price">300 руб.</span>
                                 </li>
                                 <li class="header__user-navigation-user-cart-order-item">
-                                    <a class="delete-button" href="#"><span class="visually-hidden">Удалить</span></a>
-                                    <img class="header__user-navigation-user-cart-item-image" src="./img/catalog/item-3.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-                                    <span class="header__user-navigation-user-cart-item-description">Клубничный пломбир с присыпкой из белого шоколада</span>
-                                    <b class="header__user-navigation-user-cart-item-weight">1,5 кг&times;<span class="header__user-navigation-user-cart-item-price-per-weight">300 руб</span></b>
-                                    <span class="header__user-navigation-user-cart-item-price">450 руб.</span>
+                                       <button class="delete-button"><span class="visually-hidden">Удалить </span></button>
+                                       <img class="header__user-navigation-user-cart-item-image" src="./img/catalog/item-3.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+                                       <span class="header__user-navigation-user-cart-item-description">Клубничный пломбир с присыпкой <br> из белого шоколада</span>
+                                       <b class="header__user-navigation-user-cart-item-weight">1,5 кг&times;<span class="header__user-navigation-user-cart-item-price-per-weight">300 руб</span></b>
+                                       <span class="header__user-navigation-user-cart-item-price">450 руб.</span>
                                 </li>
                             </ul>
-                            <div class="header__user-navigation-user-cart-total">
+                            <div class="header__user-navigaion-user-cart-total">
                                 <p class="header__user-navigation-user-cart-table-total-price">Итого: 750 руб.</p>
                                 <a class="header__user-navigation-user-cart-table-order-button" href="#">Оформить заказ</a>
                             </div>
                         </div>
-
-
                     </li>
                 </ul>
             </nav>
         </header>
         <main class="container">
             <div class="wrapper-main">
-                <!-- Временное решение :)-->
                 <h1 class="catalog-title">Сливочное мороженое</h1>
                 <div class="breadcrumbs-and-contacts">
                     <ul class="header__breadcrumbs-list">
@@ -164,32 +161,38 @@
                             <option value="сначала дорогие">сначала дорогие</option>
                             <option value="по жирности">по жирности</option>
                         </select>
+                        <svg class="sorting-filter-list-arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 10L0 0H11" fill="#ECF1EE" />
+                        </svg>
                     </fieldset>
                     <fieldset class="filters__filters-form-price-range-filter">
                         <legend class="filter-legend">Цена: 100 &#8381; – 500 &#8381;</legend>
                         <div class="range-controls">
                             <div class="scale">
-                                <div class="bar" style="width: 67%; margin-left: 25%"></div>
+                                <div class="bar"></div>
                             </div>
-                            <div class="toggle toggle-min" tabindex="0" style="left:25%"></div>
-                            <div class="toggle toggle-max" tabindex="0" style="left:67%"></div>
+                            <div class="toggle toggle-min" tabindex="0"></div>
+                            <div class="toggle toggle-max" tabindex="0"></div>
                         </div>
                     </fieldset>
                     <fieldset class="filters__filters-form-fat-filter">
                         <legend class="filter-legend">Жирность:</legend>
                         <ul class="filters__filters-form-fat-filter-list">
                             <li class="filters__filters-form-fat-filter-list-item">
-                                <input type="radio" name="fat-facts" value="0" id="zero-fat">
-                                <label for="zero-fat">0%</label>
+                                  <input class="radio-input" type="radio" name="fat-facts" value="0" id="zero-fat">
+                                  <label class="fat-filter-label" for="zero-fat">0%</label>
                             </li>
-                            <li class="filters__filters-form-fat-filter-list-item"><input type="radio" name="fat-facts" value="10" id="ten-fat" checked>
-                                <label for="ten-fat">до 10%</label>
+                            <li class="filters__filters-form-fat-filter-list-item">
+                              <input class="radio-input" type="radio" name="fat-facts" value="10" id="ten-fat" checked>
+                              <label class="fat-filter-label" for="ten-fat">до 10%</label>
                             </li>
-                            <li class="filters__filters-form-fat-filter-list-item"><input type="radio" name="fat-facts" value="30" id="thirty-fat">
-                                <label for="thirty-fat">до 30%</label>
+                            <li class="filters__filters-form-fat-filter-list-item">
+                               <input class="radio-input" type="radio" name="fat-facts" value="30" id="thirty-fat">
+                               <label class="fat-filter-label" for="thirty-fat">до 30%</label>
                             </li>
-                            <li class="filters__filters-form-fat-filter-list-item"><input type="radio" name="fat-facts" value="40" id="more-fat">
-                                <label for="more-fat">выше 30%</label>
+                            <li class="filters__filters-form-fat-filter-list-item">
+                               <input class="radio-input" type="radio" name="fat-facts" value="40" id="more-fat">
+                                <label class="fat-filter-label" for="more-fat">выше 30%</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -197,21 +200,24 @@
                         <legend class="filter-legend">Наполнители:</legend>
                         <ul class="filters__filters-form-taste-filter-list">
                             <li class="filters__filters-form-taste-filter-list-item">
-                                <input type="checkbox" name="filter-taste" id="filter-chocolate" value="шоколадные" checked>
-                                <label for="filter-chocolate">шоколадные</label>
+                                <input class="checkbox-input" type="checkbox" name="filter-taste" id="filter-chocolate" value="шоколадные" checked>
+                                <label class="taste-filter-label" for="filter-chocolate">шоколадные</label>
                             </li>
                             <li class="filters__filters-form-taste-filter-list-item">
-                                <input type="checkbox" name="filter-taste" id="filter-powdered-sugar" value="сахарные присыпки" checked>
-                                <label for="filter-powdered-sugar">сахарные присыпки</label>
+                                <input class="checkbox-input" type="checkbox" name="filter-taste" id="filter-powdered-sugar" value="сахарные присыпки" checked>
+                                <label class="taste-filter-label" for="filter-powdered-sugar">сахарные присыпки</label>
                             </li>
-                            <li class="filters__filters-form-taste-filter-list-item"><input type="checkbox" name="filter-taste" id="filter-fruits" value="фрукты">
-                                <label for="filter-fruits">фрукты</label>
+                            <li class="filters__filters-form-taste-filter-list-item">
+                                <input class="checkbox-input" type="checkbox" name="filter-taste" id="filter-fruits" value="фрукты">
+                                <label class="taste-filter-label" for="filter-fruits">фрукты</label>
                             </li>
-                            <li class="filters__filters-form-taste-filter-list-item"><input type="checkbox" name="filter-taste" id="filter-syrup" value="сиропы">
-                                <label for="filter-syrup">сиропы</label>
+                            <li class="filters__filters-form-taste-filter-list-item">
+                                <input class="checkbox-input" type="checkbox" name="filter-taste" id="filter-syrup" value="сиропы">
+                                <label class="taste-filter-label" for="filter-syrup">сиропы</label>
                             </li>
-                            <li class="filters__filters-form-taste-filter-list-item"><input type="checkbox" name="filter-taste" id="filter-jams" value="джемы">
-                                <label for="filter-jams">джемы</label>
+                            <li class="filters__filters-form-taste-filter-list-item">
+                                <input class="checkbox-input" type="checkbox" name="filter-taste" id="filter-jams" value="джемы">
+                                <label class="taste-filter-label" for="filter-jams">джемы</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -222,140 +228,152 @@
                 <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
                 <ul class="catalog__catalog-list">
                     <li class="catalog__catalog-list-item">
-                        <a class="catalog__catalog-list-item-link" href="#">
-                            <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
-                                <img class="catalog__catalog-list-item-image" src="./img/catalog/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-                            </p>
-                            <h3 class="catalog__catalog-list-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-                        </a>
-                        <p class="catalog__catalog-list-item-price">310 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                       <div class="catalog__catalog-list-item-wrapper">
+                           <a class="catalog__catalog-list-item-link" href="#">
+                               <p class="catalog__catalog-list-image">
+                                   <img class="catalog__catalog-list-item-image" src="./img/catalog/item-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+                               </p>
+                               <h3 class="catalog__catalog-list-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                           </a>
+                           <p class="catalog__catalog-list-item-price">310 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
+                           <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                       </div>
                     </li>
                     <li class="catalog__catalog-list-item">
-                        <a class="catalog__catalog-list-item-link" href="#">
-                            <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
-                                <img class="catalog__catalog-list-item-image" src="./img/catalog/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-                            </p>
-                            <h3 class="catalog__catalog-list-item-title">Сливочно-кофейное с кусочками шоколада</h3>
-                        </a>
-                        <p class="catalog__catalog-list-item-price">380 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <div class="catalog__catalog-list-item-wrapper">
+                            <a class="catalog__catalog-list-item-link" href="#">
+                                <p class="catalog__catalog-list-image">
+                                    <img class="catalog__catalog-list-item-image" src="./img/catalog/item-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+                                </p>
+                                <h3 class="catalog__catalog-list-item-title">Сливочно-кофейное с кусочками шоколада</h3>
+                            </a>
+                            <p class="catalog__catalog-list-item-price">380 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
+                            <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">355 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочное крем-брюле с карамельной подливкой</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">415 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочное с брусничным джемом</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">325 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-6.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочно-черничное с цельными ягодами черники</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">410 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                    </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-7.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочно-лимонное с карамельной присыпкой</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">315 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочное с шоколадной стружкой</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">320 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-9.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочно-ванильное с кусочками шоколада</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">440 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-10.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочноe с ментоловым сиропом</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">435 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочное с кусочками черного шоколада</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">355 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--<a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                        </div>
                     </li>
                     <li class="catalog__catalog-list-item">
+                       <div class="catalog__catalog-list-item-wrapper">
                         <a class="catalog__catalog-list-item-link" href="#">
                             <p class="catalog__catalog-list-image">
-                                <img class="catalog__catalog-list-image-hit" src="./img/icons/hit.svg" width="61" height="61" alt="Хит продаж">
                                 <img class="catalog__catalog-list-item-image" src="./img/catalog/item-12.jpg" alt="Сливочное с мятным сиропом" width="267" class="button button-glance" height="267">
                             </p>
                             <h3 class="catalog__catalog-list-item-title">Сливочное с мятным сиропом</h3>
                         </a>
                         <p class="catalog__catalog-list-item-price">420 &#8381;<span class="catalog__catalog-list-item-price-kg">/кг</span></p>
-                        <!--                        <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>-->
+                           <a class="catalog__catalog-list-item-button" href="#">Быстрый просмотр</a>
+                    </div>
                     </li>
                 </ul>
                 <ul class="catalog__pagination-list">
-                    <li><a class="catalog__pagination-list-item" href="#">1</a></li>
+                    <li><a class="catalog__pagination-list-item item-current" href="#">1</a></li>
                     <li><a class="catalog__pagination-list-item" href="#">2</a></li>
                     <li><a class="catalog__pagination-list-item" href="#">3</a></li>
                     <li><a class="catalog__pagination-list-item" href="#">4</a></li>
@@ -371,6 +389,7 @@
                             <span class="visually-hidden">Фейсбук</span>
                             <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2" />
+                                <path d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM22.06 11.45H19V14.9H22V18.34H19V27H16V18.34H13V14.9H16V11.45C15.9449 10.5957 16.2291 9.75426 16.7908 9.1083C17.3525 8.46234 18.1464 8.06407 19 8H22V11.45H22.06Z" fill="white" fill-opacity="0.8" />
                             </svg>
                         </a>
                     </li>
