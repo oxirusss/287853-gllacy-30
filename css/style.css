@@ -82,6 +82,7 @@
 
 
                                             /* Global */
+
 body {
     min-width: 1200px;
     margin: 0;
@@ -166,6 +167,7 @@ img {
 .header__logo {
     height: 64px;
 }
+
 /*site navigation*/
 .header__site-navigation {
     list-style: none;
@@ -206,7 +208,6 @@ img {
     left: 0;
     bottom: -20px;
 }
-
 .header__user-navigation-user-login-form-link::after {
     content: "";
     position: absolute;
@@ -215,6 +216,7 @@ img {
     left: 0;
     bottom: -20px;
 }
+
 /*site navigation submenu*/
 .catalog-item-link {
     position: relative;
@@ -286,6 +288,7 @@ img {
 .header__site-navigation-catalog-submenu .header__site-navigation-catalog-submenu-item:nth-child(2) {
     padding-top: 7px;
 }
+
 /*user navigation*/
 .header__user-navigation {
     font-size: 14px;
@@ -299,6 +302,7 @@ img {
     align-items: center;
     justify-content: flex-start;
 }
+
 /*user search*/
 .header__user-navigation-user-search {
     margin-right: 10px;
@@ -346,6 +350,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .header__user-navigation-user-search-form-button::after {
@@ -355,8 +360,8 @@ img {
     height: 20px;
     right: 0;
     bottom: -20px;
-    /*При наведении на поиск пропадает почему то значок поиска(*/
 }
+
 /*user login*/
 .header__user-navigation-user-login-form-link {
     display: flex;
@@ -463,6 +468,7 @@ img {
     border-radius: 20px;
 }
 
+
 .header__user-navigation-user-cart-full::after {
     content: "";
     position: absolute;
@@ -489,13 +495,16 @@ img {
     background-color: var(--fade-grey);
 }
 
+
 .header__site-navigation-catalog-submenu-item:hover {
     background-color: var(--link-menu-hover);
 }
-/*
-.header__site-navigation-catalog-submenu-item:hover:not(:nth-child(2)){
+
+/*Убрала пока в комментарий, уточню на консультации вопрос по этому пункту.
+.header__site-navigation-item-submenu-link[href]:hover {
     background-color: var(--link-menu-hover);
-} Да, этот пункт сделала вынужденно, мне нужно избежать ховер эффекта на странице каталога у этой ссылки, ибо у неё будет только background color, если это можно упростить как то, буду только за))*/
+}
+*/
 .header__site-navigation-catalog-submenu-item:active {
     background-color: var(--link-menu-pressed);
 }
@@ -598,7 +607,7 @@ img {
 }
 
 .sliders__sliders-controls-button.current {
-    background-color: var(--white-);
+    background-color: var(--white);
 }
 
 .slide {
@@ -613,13 +622,17 @@ img {
 .sliders__sliders-list-item-button:hover,
 .sliders__sliders-list-item-button:focus {
     background-image: var(--button-hover);
-    box-shadow:var(--red-box-shadow);
+    box-shadow: var(--red-box-shadow);
 }
 
 .sliders__sliders-list-item-button:active {
     background-image: var(--button-pressed);
     box-shadow: var(--dark-red-box-shadow);
 }
+.sliders__sliders-controls-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
 
                                             /*Offers*/
 .offers {
@@ -713,6 +726,7 @@ img {
     border-radius: 70px;
     padding: 16px 22px 15px 16px;
 }
+
 /*offers buttons behaviour*/
 .offers__raspberry-offer-button:hover {
     background-image: var(--button-hover);
@@ -730,12 +744,17 @@ img {
     background-image: var(--button-pressed);
 }
 
-                                            /*Hits*/
-.hits {
+                                            /*Catalog*/
+.catalog-hits {
     /*    margin-bottom: 40px;*/
 }
 
-.hits__hits-list {
+.catalog {
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+
+.catalog__catalog-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 26px;
@@ -744,7 +763,7 @@ img {
     padding: 0;
 }
 
-.hits__hits-list-item {
+.catalog__catalog-list-item {
     max-width: 267px;
     text-align: center;
     position: relative;
@@ -754,33 +773,29 @@ img {
     flex-direction: column;
 }
 
-.hits__hits-list-item-wrapper {
+.catalog__catalog-list-item-wrapper {
     box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.hits__hits-list-item-link {
+.catalog__catalog-list-item-link {
     text-decoration: none;
 }
 
-.hits__hits-list-image {
+.catalog__catalog-list-image {
     margin: 0;
     padding: 0;
     position: relative;
 }
 
-.hits__hits-list-image-hit {
-    position: absolute;
-}
-
-.hits__hits-list-item-image {
+.catalog__catalog-list-item-image {
     border-radius: 50%;
     margin-bottom: 13px;
 }
 
-.hits__hits-list-item-title {
+.catalog__catalog-list-item-title {
     color: var(--text-light);
     font-size: 16px;
     font-weight: var(--font-weight-medium);
@@ -791,26 +806,31 @@ img {
     line-height: 22px;
 }
 
-.hits__hits-list-item-price {
+.catalog__catalog-list-image-hit {
+    position: absolute;
+}
+
+.catalog__catalog-list-item-price {
     font-size: 45px;
     line-height: 45px;
     font-weight: var(--font-weight-bold);
     margin: 0;
     padding: 0;
     justify-items: center;
+    text-shadow: var(--transparent-text-shadow);
     position: absolute;
     left: 10px;
     top: 194px;
-    text-shadow: var(--transparent-text-shadow);
+
 }
 
-.hits__hits-list-item-price-kg {
+.catalog__catalog-list-item-price-kg {
     font-size: 30px;
     line-height: 35px;
     font-weight: var(--font-weight-bold);
 }
 
-.hits__hits-list-item-button {
+.catalog__catalog-list-item-button {
     display: block;
     margin-top: 11px;
     font-size: 18px;
@@ -826,7 +846,7 @@ img {
     z-index: -1;
 }
 
-.hits__hits-list-item-wrapper:hover::before {
+.catalog__catalog-list-item-wrapper:hover::before {
     position: absolute;
     content: "";
     top: -6px;
@@ -835,31 +855,22 @@ img {
     left: -13px;
     border-radius: 4px;
     background-color: var(--white);
-    box-shadow: var(--transparent-shadow);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
     opacity: 0.2;
     height: calc(100% + 21px);
     z-index: -1;
-    /*calc(100% + 70px) 
-    Как правильно выровнять карточки и текст в них? Какие то меньше, и сильно едут вверх из за этого ( и можно ли так как написала тут?*/
 }
 
-.hits__hits-list-item-wrapper:hover {
+.catalog__catalog-list-item-wrapper:hover {
     z-index: 1;
 }
 
-.hits__hits-list-item-wrapper:hover .hits__hits-list-item-button {
+.catalog__catalog-list-item-wrapper:hover .catalog__catalog-list-item-button {
     z-index: 1;
 }
 
-/*hits buttons behaviour*/
-.hits__hits-list-item-button:hover {
+.catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
-    box-shadow: var(--red-box-shadow);
-}
-
-.hits__hits-list-item-button:active {
-    background-image: var(--button-pressed);
-    box-shadow: var(--red-box-shadow);
 }
 
                                             /*Features*/
@@ -932,6 +943,7 @@ img {
 .features__features-list-item:nth-child(4) {
     margin-bottom: 0;
 }
+
                                             /*News and Subscription*/
 .news-and-subscription {
     display: grid;
@@ -1011,6 +1023,7 @@ img {
     padding: 10px 19px;
     border: none;
     margin-left: 9px;
+    cursor: pointer;
 }
 
 .news-and-subscription__subscription-form-item {
@@ -1021,7 +1034,7 @@ img {
 .news-and-subscription__subscription-form-input {
     width: 368px;
     height: 44px;
-    padding: 15px 204px 14px 14px;
+    padding: 15px 202px 14px 14px;
     border: 1px solid var(--border-input);
     border-radius: 6px;
     background-color: var(--text-light);
@@ -1040,6 +1053,7 @@ img {
 
 .news-and-subscription__news-link:hover {
     color: var(--link-pressed);
+    text-decoration: underline var(--link-pressed);
 }
 
                                             /*Contacts*/
@@ -1050,7 +1064,7 @@ img {
     color: var(--text-dark);
     width: var(--map-width);
     margin: 0 auto;
-    /*Это плохая идея?*/
+
 }
 
 .contacts__address {
@@ -1207,6 +1221,7 @@ img {
     text-decoration: none;
     color: var(--text-light);
 }
+
 /*footer links and buttons behaviour*/
 .footer__service-info-link:hover {
     color: var(--link-hover);
@@ -1222,7 +1237,6 @@ img {
 
 .footer__socials-list-button:active {
     border-color: var(--socials-border);
-    /*move to root*/
 }
 
                                             /*Modal*/
@@ -1231,7 +1245,7 @@ img {
     top: 50%;
     right: 50%;
     margin: -238px;
-    display: none;
+/*    display: none;*/
 }
 
 .modal-feedback__form {
@@ -1302,6 +1316,7 @@ img {
     background-color: transparent;
     border: none;
 }
+
                                             /*Catalog Page*/
 
                                             /*Header*/
@@ -1433,7 +1448,12 @@ img {
 }
 
 .header__user-navigation-user-cart-item-weight {
+    font-weight: var(--font-weight-regular);
     padding-right: 26px;
+}
+.header__user-navigation-user-cart-item-price-per-weight {
+    color: var(--lightest-grey);
+    padding-left: 3px;
 }
 
 .header__user-navigation-user-cart-order-item:not(:last-child) {
@@ -1478,6 +1498,7 @@ img {
     border-radius: 26px;
     box-shadow: var(--reddish-shadow);
 }
+
 /*header links and buttons behaviour*/
 .header__user-navigation-user-cart-table-order-button:hover {
     background-image: var(--button-hover);
@@ -1486,29 +1507,28 @@ img {
 .header__user-navigation-user-cart-table-order-button:active {
     background-image: var(--button-pressed);
 }
+
                                             /*Filters*/
 .filters {
     margin-bottom: 40px;
     font-size: 16px;
     line-height: 18px;
 }
-
 .filters__filters-form {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    /*    margin-bottom: -14px;*/
+    margin-bottom: -14px;
     box-sizing: border-box;
-
 }
-
 .filter-legend {
     margin-bottom: 7px;
     padding-left: 16px;
     font-size: 14px;
     font-weight: var(--font-weight-medium);
 }
+
 /*sorting filter*/
 .filters__filters-form-sorting-filter {
     border: none;
@@ -1528,7 +1548,6 @@ img {
     border: none;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
-    /*move color to root*/
     appearance: none;
 }
 
@@ -1536,12 +1555,12 @@ img {
     position: absolute;
     top: 14px;
     right: 18px;
-    ;
 }
 
 .sorting-filter-list:hover {
     color: var(--text-dark);
 }
+
 /*price filter*/
 .filters__filters-form-price-range-filter {
     border: none;
@@ -1559,8 +1578,6 @@ img {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     box-sizing: border-box;
-    /* Я же правильно тут использовала это свойство? Оно мне стабилизировало тут размер и все выглядит нормально))
-*/
 }
 
 .scale {
@@ -1597,6 +1614,7 @@ img {
 .toggle-max {
     left: 132px;
 }
+
 /*fat filter*/
 .filters__filters-form-fat-filter {
     border: none;
@@ -1623,7 +1641,7 @@ img {
     position: relative;
     padding: 0;
 }
-/*Намудрила, или такой вариант вполне можно оставить?*/
+
 .radio-input {
     appearance: none;
 }
@@ -1737,9 +1755,9 @@ img {
     border: 2px solid var(--text-light);
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
-    /*move to root*/
     cursor: pointer;
 }
+
 /*filter links and buttons behaviour*/
 .filters__filters-form-button:hover {
     color: var(--text-dark);
@@ -1751,128 +1769,12 @@ img {
     background-color: var(--fade-grey);
 }
 
-                                            /*Catalog*/
+                                       /*Catalog*/
 
 .site-wrapper-catalog {
     background-color: var(--slider-one-dark);
 }
 
-.catalog {
-    margin-top: 40px;
-    padding-bottom: 30px;
-}
-
-.catalog__catalog-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 26px;
-    grid-row-gap: 40px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.catalog__catalog-list-item {
-    max-width: 267px;
-    text-align: center;
-    position: relative;
-    margin: 0;
-    padding: 0;
-
-}
-
-.catalog__catalog-list-item-wrapper {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.catalog__catalog-list-item-link {
-    text-decoration: none;
-}
-
-.catalog__catalog-list-image {
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.catalog__catalog-list-item-image {
-    border-radius: 50%;
-    margin-bottom: 13px;
-}
-
-.catalog__catalog-list-item-title {
-    color: var(--text-light);
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    text-decoration: underline rgba(255, 255, 255, 0.2);
-    text-underline-position: under;
-    margin: 0;
-    padding: 0;
-    line-height: 22px;
-}
-
-.catalog__catalog-list-item-price {
-    font-size: 45px;
-    line-height: 45px;
-    font-weight: var(--font-weight-bold);
-    margin: 0;
-    padding: 0;
-    justify-items: center;
-    /*
-    position: absolute;
-    left: -10px;
-    top: -192px;
-    */
-    text-shadow: var(--transparent-text-shadow);
-}
-
-.catalog__catalog-list-item-price-kg {
-    font-size: 30px;
-    line-height: 35px;
-    font-weight: var(--font-weight-bold);
-}
-
-.catalog__catalog-list-item-button {
-    display: block;
-    margin-top: 11px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
-    color: var(--text-light);
-    background-image: var(--button-rest);
-    box-shadow: var(--red-box-shadow);
-    border-radius: 50px;
-    padding: 10px 16px 10px 16px;
-    align-self: center;
-    z-index: -1;
-}
-
-.catalog__catalog-list-item-wrapper:hover::before {
-    position: absolute;
-    content: "";
-    top: -6px;
-    right: -13px;
-    bottom: -73px;
-    left: -13px;
-    border-radius: 4px;
-    background-color: var(--white);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-    opacity: 0.2;
-    height: calc(100% + 21px);
-    z-index: -1;
-}
-
-.catalog__catalog-list-item-wrapper:hover {
-    z-index: 1;
-}
-
-.catalog__catalog-list-item-wrapper:hover .catalog__catalog-list-item-button {
-    z-index: 1;
-}
 /*pagination list*/
 .catalog__pagination-list {
     list-style: none;
@@ -1900,11 +1802,8 @@ img {
     color: var(--text-dark);
     background-color: var(--white);
 }
-/*catalog buttons behaviour temporary*/
-.catalog__catalog-list-item-button:hover {
-    background-image: var(--button-hover);
-}
 
+/*catalog buttons behaviour*/
 .catalog__catalog-list-item-button:active {
     background-image: var(--button-pressed);
 }
