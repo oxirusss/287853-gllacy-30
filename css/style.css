@@ -335,6 +335,7 @@ img {
     height: 44px;
     font-size: 14px;
     line-height: 16px;
+    padding: 15px 199px 15px 15px;
     border: 1px solid var(--border-input);
     border-radius: 4px;
     background-color: var(--text-light);
@@ -1238,7 +1239,7 @@ background-color: var(--link-menu-hover);}*/
     top: 50%;
     right: 50%;
     margin: -238px;
-    display: none;
+/*    display: none;*/
 }
 
 .modal-feedback__form {
@@ -1257,11 +1258,11 @@ background-color: var(--link-menu-hover);}*/
     line-height: 28px;
     color: var(--text-dark);
     font-weight: var(--font-weight-medium);
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
 }
 
 .modal-feedback__form-item {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
 }
 
 .modal-feedback__form-input {
@@ -1270,8 +1271,19 @@ background-color: var(--link-menu-hover);}*/
     border: 1px solid var(--border-input);
     border-radius: 4px;
     background-color: var(--text-light);
+    font-size: 16px;
+    line-height: 20px;
 }
+.modal-feedback__form-input:hover {
+    padding: 9px 13px;
+    border: 2px solid var(--border-input);
 
+}
+.modal-feedback__form-input:focus {
+    padding: 9px 13px;
+    border: 2px solid rgba(46, 136, 228, 0.52);
+    
+}
 .modal-feedback__form-textarea {
     height: 154px;
     width: 428px;
