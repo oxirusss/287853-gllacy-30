@@ -131,7 +131,6 @@ img {
     width: 1px;
     overflow: hidden;
 }
-
                                             /*Header*/
 .header {
     display: grid;
@@ -237,6 +236,7 @@ img {
     left: 0;
     bottom: -20px;
 }
+
 /*site navigation submenu*/
 .catalog-item-link {
     position: relative;
@@ -308,14 +308,17 @@ img {
 .header__site-navigation-catalog-submenu .header__site-navigation-catalog-submenu-item:nth-child(2) {
     padding-top: 7px;
 }
+
 .header__site-navigation-catalog-submenu-item:hover {
     background-color: var(--link-menu-hover);
 }
-/*
-Нашла другой способ обмануть тут разметку, задала иной класс этой ссылке и все выставила там) идея плохая?
+
 .header__site-navigation-item-submenu-link[href]:hover {
-background-color: var(--link-menu-hover);}
-*/
+    background-color: var(--link-menu-hover);
+}
+
+/*Так правильно или нужно только link оставить? Ведь нам нужен фон у самого item */
+
 .header__site-navigation-catalog-submenu-item:active {
     background-color: var(--link-menu-pressed);
 }
@@ -359,7 +362,6 @@ background-color: var(--link-menu-hover);}
 .header__user-navigation-user-search-form:hover .header__user-navigation-user-search-form-field {
     z-index: 1;
 }
-
 .input-search {
     width: 311px;
     height: 44px;
@@ -376,6 +378,7 @@ background-color: var(--link-menu-hover);}
     padding: 0;
     width: 32px;
     height: 32px;
+    color: var(--text-light);
     background: var(--accent-color);
     border: none;
     border-radius: 50%;
@@ -385,6 +388,12 @@ background-color: var(--link-menu-hover);}
     cursor: pointer;
 }
 
+.header__user-navigation-user-search-form-button:hover {
+    color: var(--text-dark);
+    background-color: var(--light-background);
+}
+
+/*Все изменила и смена цвета работает, но при наведении фон вместо нужного будто затемнен( где то ошиблась?*/
 .header__user-navigation-user-search-form-button::after {
     content: "";
     position: absolute;
@@ -392,12 +401,6 @@ background-color: var(--link-menu-hover);}
     height: 20px;
     right: 0;
     bottom: -20px;
-}
-.header__user-navigation-user-search-form-button:hover path {
-    fill: var(--text-dark);
-}
-.header__user-navigation-user-search-form-button:hover {
-     background-color: var(--light-background);
 }
 
 /*user login*/
@@ -479,13 +482,12 @@ background-color: var(--link-menu-hover);}
 .header__user-navigation-user-login-form:hover .header__user-navigation-user-login-form-popup {
     z-index: 1;
 }
+
 .header__user-navigation-user-login-form-link:hover {
     color: var(--text-dark);
     background-color: var(--light-background);
 }
-.header__user-navigation-user-login-form-link:hover path {
-    fill: var(--text-dark);
-}
+
 .header__user-navigation-login-help-link:hover,
 .header__user-navigation-login-help-link:active {
     color: var(--link-pressed);
@@ -616,21 +618,20 @@ background-color: var(--link-menu-hover);}
     display: block;
 }
 
-/*sliders buttons behaviour*/
 .sliders__sliders-list-item-button:hover,
 .sliders__sliders-list-item-button:focus {
     background-image: var(--button-hover);
-    box-shadow:var(--red-box-shadow);
+    box-shadow: var(--red-box-shadow);
 }
 
 .sliders__sliders-list-item-button:active {
     background-image: var(--button-pressed);
     box-shadow: var(--dark-red-box-shadow);
 }
+
 .sliders__sliders-controls-button:hover {
     background: rgba(255, 255, 255, 0.4);
 }
-
                                             /*Offers*/
 .offers {
     font-size: 18px;
@@ -742,15 +743,12 @@ background-color: var(--link-menu-hover);}
 }
 
                                             /*Catalog hits*/
-.catalog-hits {
-    /*    margin-bottom: 40px;*/
-}
 
 .catalog__catalog-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 26px;
-/*    grid-row-gap: 37px; Если это выставлять слишком большее будет расстояние, пока убрала*/
+    /*    grid-row-gap: 37px; Если это выставлять слишком большее будет расстояние, пока убрала*/
     list-style: none;
     margin: 0;
     padding: 0;
@@ -771,6 +769,7 @@ background-color: var(--link-menu-hover);}
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 }
 
 .catalog__catalog-list-item-link {
@@ -787,6 +786,7 @@ background-color: var(--link-menu-hover);}
     border-radius: 50%;
     margin-bottom: 13px;
 }
+
 .catalog__catalog-list-image-hit {
     position: absolute;
 }
@@ -805,7 +805,7 @@ background-color: var(--link-menu-hover);}
 .catalog__catalog-list-item-price {
     position: absolute;
     top: 204px;
-    left:-5px;
+    left: -5px;
     font-size: 45px;
     line-height: 45px;
     font-weight: var(--font-weight-bold);
@@ -861,7 +861,6 @@ background-color: var(--link-menu-hover);}
     z-index: 1;
 }
 
-/* buttons behaviour*/
 .catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
     box-shadow: var(--red-box-shadow);
@@ -871,7 +870,6 @@ background-color: var(--link-menu-hover);}
     background-image: var(--button-pressed);
     box-shadow: var(--red-box-shadow);
 }
-
                                             /*Features*/
 .features {
     color: var(--text-dark);
@@ -1022,7 +1020,7 @@ background-color: var(--link-menu-hover);}
     padding: 10px 19px;
     border: none;
     margin-left: 9px;
-     cursor: pointer;
+    cursor: pointer;
 }
 
 .news-and-subscription__subscription-form-item {
@@ -1040,26 +1038,30 @@ background-color: var(--link-menu-hover);}
     box-sizing: border-box;
     color: var(--input-grey);
 }
+
 /*forms styles*/
 .news-and-subscription__subscription-form-input:hover {
-     padding: 14px 202px 13px 13px;
-     border: 2px solid var(--border-input);
+    padding: 14px 202px 13px 13px;
+    border: 2px solid var(--border-input);
 }
+
 .news-and-subscription__subscription-form-input:focus {
     padding: 14px 202px 13px 13px;
-    border: 2px solid rgba(46, 136, 228, 0.52);  
+    border: 2px solid rgba(46, 136, 228, 0.52);
 }
+
 .news-and-subscription__subscription-form-input:not(:placeholder-shown) {
     color: var(--text-dark);
 }
 
-/*news and subscription links and buttons behaviour*/
 .news-and-subscription__subscription-form-button:hover {
     background-image: var(--button-hover);
 }
+
 .news-and-subscription__subscription-form-button:active {
     background-image: var(--button-pressed);
 }
+
 .news-and-subscription__news-link:hover {
     color: var(--link-pressed);
 }
@@ -1127,7 +1129,6 @@ background-color: var(--link-menu-hover);}
     display: block;
 }
 
-/*contacts buttons behaviour*/
 .contacts__button:hover {
     background-image: var(--button-hover);
 }
@@ -1137,7 +1138,6 @@ background-color: var(--link-menu-hover);}
 }
 
                                             /*Footer*/
-
 .footer {
     font-size: 13px;
     line-height: 18px;
@@ -1177,12 +1177,12 @@ background-color: var(--link-menu-hover);}
 }
 
 .footer__socials-list-button {
-  fill:currentColor;
-  text-decoration: none;
-  width: 32px;
-  height: 32px;
+    color: white;
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
 }
-/*Мне кажется я тебя уже замучила этими svg, все убрала как ты показала и в итоге все фиолетовое((*/
+/*Сошиалс никак не задаются нужными( может у path внутри тоже нужно прописывать значение?((*/
 .footer__service-info-list-right {
     list-style: none;
     padding-right: 32px;
@@ -1230,7 +1230,6 @@ background-color: var(--link-menu-hover);}
     color: var(--text-light);
 }
 
-/*footer links and buttons behaviour*/
 .footer__service-info-link:hover {
     color: var(--link-hover);
 }
@@ -1270,6 +1269,7 @@ background-color: var(--link-menu-hover);}
     background-color: var(--light-yellow);
     box-sizing: border-box;
 }
+
 .modal-feedback-title {
     font-size: 24px;
     line-height: 28px;
@@ -1291,14 +1291,17 @@ background-color: var(--link-menu-hover);}
     font-size: 16px;
     line-height: 20px;
 }
+
 .modal-feedback__form-input:hover {
     padding: 9px 13px;
     border: 2px solid var(--border-input);
 }
+
 .modal-feedback__form-input:focus {
     padding: 9px 13px;
-    border: 2px solid rgba(46, 136, 228, 0.52); 
+    border: 2px solid rgba(46, 136, 228, 0.52);
 }
+
 .modal-feedback__form-textarea {
     height: 154px;
     width: 428px;
@@ -1469,6 +1472,7 @@ background-color: var(--link-menu-hover);}
 .header__user-navigation-user-cart-item-weight {
     padding-right: 26px;
 }
+
 .header__user-navigation-user-cart-item-price-per-weight {
     color: var(--lightest-grey);
     padding-left: 3px;
@@ -1517,7 +1521,6 @@ background-color: var(--link-menu-hover);}
     box-shadow: var(--reddish-shadow);
 }
 
-/*header links and buttons behaviour*/
 .header__user-navigation-user-cart-table-order-button:hover {
     background-image: var(--button-hover);
 }
@@ -1571,13 +1574,14 @@ background-color: var(--link-menu-hover);}
     appearance: none;
 }
 
-.sorting-filter-list-arrow  {
+.sorting-filter-list-arrow {
     position: absolute;
     top: 14px;
     right: 18px;
 }
-.sorting-filter-list:hover + .sorting-filter-list-arrow  path {
-    fill: var(--black);
+
+.sorting-filter-list:hover + .sorting-filter-list-arrow  {
+    color: var(--black);
 }
 
 
@@ -1782,7 +1786,6 @@ background-color: var(--link-menu-hover);}
     cursor: pointer;
 }
 
-/*filter links and buttons behaviour*/
 .filters__filters-form-button:hover {
     color: var(--text-dark);
     background-color: var(--light-background);
@@ -1798,6 +1801,7 @@ background-color: var(--link-menu-hover);}
 .site-wrapper-catalog {
     background-color: var(--slider-one-dark);
 }
+
 .catalog {
     margin-top: 40px;
     padding-bottom: 30px;
@@ -1810,6 +1814,7 @@ background-color: var(--link-menu-hover);}
     position: relative;
     align-items: baseline;
 }
+
 .catalog__pagination-list {
     list-style: none;
     display: flex;
@@ -1817,6 +1822,7 @@ background-color: var(--link-menu-hover);}
     margin: 0;
     padding: 0;
 }
+
 .catalog__pagination-list-item {
     display: flex;
     align-items: center;
@@ -1826,32 +1832,39 @@ background-color: var(--link-menu-hover);}
     padding: 7px 8px 7px 8px;
     box-sizing: border-box;
 }
+
 .catalog__pagination-list-item:not(:last-child) {
     margin-right: 4px;
 }
+
 .catalog__pagination-button {
     width: 7px;
     height: 12px;
-    background:transparent;
+    background: transparent;
     border: none;
     padding: 0;
 }
+
 .button-back {
     margin-right: 16px;
 }
+
 .button-forward {
     margin-left: 11px;
 }
+
 /*Надеюсь тут все правильно сделала*/
 .catalog__pagination-list-item.item-current {
     color: var(--text-dark);
     background-color: var(--white);
-    
+
 }
+
 .catalog__pagination-list-item-link-current {
     text-decoration: none;
     color: var(--text-dark);
 }
+
 .catalog__pagination-list-item-link {
     text-decoration: none;
     color: var(--text-light);
@@ -1859,7 +1872,6 @@ background-color: var(--link-menu-hover);}
     font-weight: var(--font-weight-medium);
 }
 
-/*catalog buttons behaviour*/
 .catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
 }
@@ -1876,6 +1888,7 @@ background-color: var(--link-menu-hover);}
     background-color: var(--white);
     border-radius: 50%;
 }
+
 .catalog__pagination-list-item-link:active {
-     color: var(--text-dark);
+    color: var(--text-dark);
 }
