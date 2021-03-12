@@ -33,6 +33,7 @@
     --reddish-text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
     --radish-box-shadow:0px 2px 2px rgba(172, 16, 0, 0.64);
     --red-box-shadow: 0px 2px 2px #AC1000;
+    --grey-box-shadow: 0px 2px 1px #696969;
     --dark-red-box-shadow:inset 0px 2px 2px #942718;
     --light-grey-shadow: 0px 1px 2px rgba(172, 16, 0, 0.25);
     --transparent-text-shadow:0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -42,7 +43,11 @@
      --border-transparent: rgba(255, 255, 255, 0.2);
      --border-submenu: rgba(50, 50, 50, 0.2);
      --border-input: rgba(178, 178, 178, 0.52);
-     --socials-border:rgba(255, 255, 255, 0.7);
+     --socials-border: rgba(255, 255, 255, 0.7);
+     --sliders-button-bg: rgba(255, 255, 255, 0.4);
+     --border-input-focus: 2px solid rgba(46, 136, 228, 0.52);
+     --filters-border-light:3px solid rgba(255, 255, 255, 0.8);
+     --filters-border-medium:3px solid rgba(255, 255, 255, 1);
     /*Typography*/
     --main-font: 'Roboto', 'Arial', sans-serif;
     --font-body: 16px;
@@ -76,7 +81,11 @@
     --slider-three-dark: var(--red-orange);
     --slider-three-light: var(--red-orange-light);
     --light-background: var(--white);
-    --accent-color: rgba(255, 255, 255, 0.2);
+    --transparent-bg:transparent;
+    --modal-container-bg: rgba(0, 0, 0, 0.3);
+    --raspberry-offer-bg:#74143c;
+    --chocolate-offer-bg:#411900;
+    --features-bg:#fff1d9;
 }
 
 
@@ -173,6 +182,7 @@ img {
 
 .header__logo {
     height: 64px;
+    width: 154;
 }
 
 /*site navigation*/
@@ -192,7 +202,7 @@ img {
 
 .header__site-navigation-item-link {
     color: var(--text-light);
-    text-decoration: underline rgba(255, 255, 255, 0.2);
+    text-decoration: underline var(--border-transparent);
     text-underline-position: under;
     padding: 5px 14px 8px 14px;
     display: block;
@@ -379,7 +389,7 @@ img {
     width: 32px;
     height: 32px;
     color: var(--text-light);
-    background: var(--accent-color);
+    background: var(--border-transparent);
     border: none;
     border-radius: 50%;
     display: flex;
@@ -412,7 +422,7 @@ img {
     color: var(--text-light);
     text-decoration: none;
     padding: 8px 16px 8px;
-    background: var(--accent-color);
+    background: var(--border-transparent);
     border-radius: 20px;
 }
 
@@ -501,7 +511,7 @@ img {
     color: var(--text-light);
     text-decoration: none;
     padding: 8px 16px 8px;
-    background: var(--accent-color);
+    background: var(--border-transparent);
     border-radius: 20px;
 }
 
@@ -600,8 +610,8 @@ img {
     padding: 0;
     width: 17px;
     height: 17px;
-    background-color: transparent;
-    border: 2px solid #ffffff;
+    background-color: var(--transparent-bg);
+    border: 2px solid var(--white);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -630,7 +640,7 @@ img {
 }
 
 .sliders__sliders-controls-button:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--sliders-button-bg);
 }
                                             /*Offers*/
 .offers {
@@ -648,6 +658,7 @@ img {
     background-image: url("../img/backgrounds/raspberry-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color:var(--raspberry-offer-bg);
     border-radius: 16px;
     padding: 16px 16px 30px 22px;
 }
@@ -688,6 +699,7 @@ img {
     background-image: url("../img/backgrounds/chocolate-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--chocolate-offer-bg);
     border-radius: 16px;
     padding: 16px 16px 30px 22px;
 }
@@ -748,9 +760,9 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 26px;
-    /*    grid-row-gap: 37px; Если это выставлять слишком большее будет расстояние, пока убрала*/
     list-style: none;
     margin: 0;
+    margin-bottom: 80px;
     padding: 0;
 }
 
@@ -795,17 +807,17 @@ img {
     color: var(--text-light);
     font-size: 16px;
     padding: 0;
+    margin: 0;
     line-height: 22px;
     font-weight: var(--font-weight-medium);
-    text-decoration: underline rgba(255, 255, 255, 0.2);
+    text-decoration: underline var(--border-transparent);
     text-underline-position: under;
-    margin: 0;
 }
 
 .catalog__catalog-list-item-price {
     position: absolute;
-    top: 204px;
-    left: -5px;
+    top: 207px;
+    left: -4px;
     font-size: 45px;
     line-height: 45px;
     font-weight: var(--font-weight-bold);
@@ -847,7 +859,7 @@ img {
     left: -13px;
     border-radius: 4px;
     background-color: var(--white);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--transparent-shadow);
     opacity: 0.2;
     height: calc(100% + 21px);
     z-index: -1;
@@ -875,6 +887,7 @@ img {
     color: var(--text-dark);
     background-image: url(../img/backgrounds/waffle-bg.jpg);
     background-repeat: repeat;
+    background-color:var(--features-bg);
     background-size: 1146px 306px;
     border-radius: 16px;
     margin-bottom: 40px;
@@ -955,6 +968,7 @@ img {
     background-image: url(../img/backgrounds/blog-bg.jpg);
     background-repeat: repeat;
     background-size: cover;
+    background-color: var(--white);
     border-radius: 16px;
     padding: 23px 250px 0 20px;
     width: 560px;
@@ -1047,7 +1061,7 @@ img {
 
 .news-and-subscription__subscription-form-input:focus {
     padding: 14px 202px 13px 13px;
-    border: 2px solid rgba(46, 136, 228, 0.52);
+    border: var(--border-input-focus);
 }
 
 .news-and-subscription__subscription-form-input:not(:placeholder-shown) {
@@ -1075,7 +1089,11 @@ img {
     width: var(--map-width);
     margin: 0 auto;
 }
-
+.contacts__map {
+    width: 100%;
+    height: 430px;
+}
+/*Правильно ли я встроила карту?*/
 .contacts__address {
     position: absolute;
     top: 62px;
@@ -1249,7 +1267,7 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--modal-container-bg);
     display: none;
 }
 
@@ -1299,7 +1317,7 @@ img {
 
 .modal-feedback__form-input:focus {
     padding: 9px 13px;
-    border: 2px solid rgba(46, 136, 228, 0.52);
+    border: var(--border-input-focus);
 }
 
 .modal-feedback__form-textarea {
@@ -1455,7 +1473,7 @@ img {
     background-image: url("../img/icons/small-close.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-color: transparent;
+    background-color: var(--transparent-bg);
     align-self: center;
 }
 
@@ -1570,7 +1588,7 @@ img {
     height: 36px;
     border: none;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
     appearance: none;
 }
 
@@ -1603,7 +1621,7 @@ img {
     height: 36px;
     padding: 18px 21px;
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
     border-radius: 20px;
     box-sizing: border-box;
 }
@@ -1611,7 +1629,7 @@ img {
 .scale {
     width: 176px;
     height: 2px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
 }
 
 .bar {
@@ -1660,7 +1678,7 @@ img {
     padding: 13px 17px 12px 14px;
     box-sizing: border-box;
     height: 36px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
     border-radius: 20px;
 }
 
@@ -1687,7 +1705,7 @@ img {
     left: 0;
     width: 22px;
     height: 22px;
-    border: 3px solid rgba(255, 255, 255, 0.8);
+    border: var(--filters-border-light);
     border-radius: 50%;
     transform: translateY(-50%);
 }
@@ -1705,7 +1723,7 @@ img {
 }
 
 .radio-input + .fat-filter-label:hover::before {
-    border: 3px solid rgba(255, 255, 255, 1);
+    border:var(--filters-border-medium);
 }
 
 .radio-input:checked + .fat-filter-label:hover::after {
@@ -1729,7 +1747,7 @@ img {
     padding: 13px 19px 10px 16px;
     box-sizing: border-box;
     height: 36px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
     border-radius: 20px;
 }
 
@@ -1782,7 +1800,7 @@ img {
     color: var(--text-light);
     border: 2px solid var(--text-light);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
     cursor: pointer;
 }
 
@@ -1792,7 +1810,7 @@ img {
 }
 
 .filters__filters-form-button:active {
-    box-shadow: inset 0px 2px 1px #696969;
+    box-shadow: inset var(--grey-box-shadow);
     background-color: var(--fade-grey);
 }
 
@@ -1803,8 +1821,8 @@ img {
 }
 
 .catalog {
-    margin-top: 40px;
-    padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 /*pagination list*/
@@ -1840,7 +1858,7 @@ img {
 .catalog__pagination-button {
     width: 7px;
     height: 12px;
-    background: transparent;
+    background: var(--transparent-bg);
     border: none;
     padding: 0;
 }
@@ -1881,7 +1899,7 @@ img {
 }
 
 .catalog__pagination-list-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--border-transparent);
 }
 
 .catalog__pagination-list-item:active {
