@@ -48,6 +48,7 @@
      --border-input-focus: 2px solid rgba(46, 136, 228, 0.52);
      --filters-border-light:3px solid rgba(255, 255, 255, 0.8);
      --filters-border-medium:3px solid rgba(255, 255, 255, 1);
+     --help-link-underline:1px solid rgba(50, 50, 50, 0.3);
     /*Typography*/
     --main-font: 'Roboto', 'Arial', sans-serif;
     --font-body: 16px;
@@ -316,8 +317,7 @@ img {
 
 .header__site-navigation-item-submenu-link[href]:hover {
     background-color: var(--link-menu-hover);
-}
-/*Так правильно или нужно только link оставить? Ведь нам нужен фон у самого item  */
+} 
 
 .header__site-navigation-catalog-submenu-item:active {
     background-color: var(--link-menu-pressed);
@@ -346,7 +346,7 @@ img {
 
 .header__user-navigation-user-search-form-field {
     position: absolute;
-    top: 39px;
+    top: 36px;
     right: 0;
     box-sizing: border-box;
     padding: 20px 15px;
@@ -421,7 +421,7 @@ img {
 .header__user-navigation-user-login-form-popup {
     position: absolute;
     right: 10px;
-    top: 39px;
+    top: 36px;
     width: 277px;
     padding: 20px 17px 22px 19px;
     background-color: var(--light-yellow);
@@ -469,7 +469,8 @@ img {
     font-weight: var(--font-weight-regular);
     line-height: 15px;
     color: var(--text-dark);
-    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+    text-decoration: underline var(--help-link-underline);
+    text-underline-position: under;
 }
 
 .header__user-navigation-user-login-form:hover .header__user-navigation-user-login-form-popup {
@@ -484,6 +485,8 @@ img {
 .header__user-navigation-login-help-link:hover,
 .header__user-navigation-login-help-link:active {
     color: var(--link-pressed);
+    text-decoration: underline var(--link-pressed);
+    text-underline-position: under;
 }
 
 /*user cart*/
@@ -525,6 +528,7 @@ img {
     padding-left: 7px;
     color: var(--text-dark)
 }
+
                                             /*Sliders*/
 .sliders {
     position: relative;
@@ -566,6 +570,7 @@ img {
 
 .sliders__sliders-list-item-button {
     display: inline-block;
+    vertical-align: center;
     font-size: 32px;
     line-height: 44px;
     font-weight: var(--font-weight-bold);
@@ -1196,7 +1201,7 @@ img {
     width: 32px;
     height: 32px;
 }
-/*Сошиалс никак не задаются нужными( может у path внутри тоже нужно прописывать значение?((*/
+
 .footer__service-info-list-right {
     list-style: none;
     margin: 0;
@@ -1210,6 +1215,8 @@ img {
 .footer__service-info-link {
     color: var(--text-light);
     text-decoration: none;
+    text-decoration: underline var(--border-transparent);
+    text-underline-position: under;
 }
 
 .link-special {
@@ -1250,20 +1257,25 @@ img {
 .footer__copyright-link {
     text-decoration: none;
     color: var(--text-light);
+    text-decoration: underline var(--border-transparent);
+    text-underline-position: under;
 }
 
 .footer__service-info-link:hover {
     color: var(--link-hover);
+    text-decoration: underline var(--link-hover);
+    text-underline-position: under;
 }
 
 .footer__copyright-link:hover {
     color: var(--link-hover);
+    text-decoration: underline var(--link-hover);
+    text-underline-position: under;
 }
 
 .footer__socials-list-button:active {
     border-color: var(--socials-border);
 }
-
                                             /*Modal*/
 .modal-feedback {
     position: fixed;
@@ -1394,6 +1406,7 @@ img {
     max-width: 946px;
     margin: 0;
     padding: 0;
+    padding-bottom: 7px;
 }
 
 .header__breadcrumbs-list-item .header__breadcrumbs-list-item-link {
@@ -1440,7 +1453,7 @@ img {
 .header__user-navigation-user-cart-container {
     position: absolute;
     right: 0;
-    top: 39px;
+    top: 36px;
     min-width: 539px;
     padding: 20px 14px 21px 15px;
     box-sizing: border-box;
@@ -1453,6 +1466,59 @@ img {
     z-index: -1;
 }
 
+.header__user-navigation-user-cart-order-table {
+    border-bottom: 1px solid var(--mid-grey);
+    border-collapse: collapse;
+}
+.header__user-navigation-user-cart-order-table td {
+        padding-bottom: 18px;
+}
+/*Как здесь корректней прописать чтоб обращение не через td делать? И как продлить бордер Боттом до конца?*/
+.header__user-navigation-user-cart-order-item-one {
+     vertical-align: top;
+}
+.header__user-navigation-user-cart-order-item-two {
+    vertical-align: top;
+}
+.delete-button {
+    width: 11px;
+    height: 11px;
+    padding:0 0 10px;
+    margin: 0;
+    border: none;
+    background-image: url("../img/icons/small-close.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: var(--transparent-bg);
+}
+.header__user-navigation-user-cart-order-item-thumbnail {
+     padding: 0 13px 0 9px;
+}
+.header__user-navigation-user-cart-item-image {
+     border-radius: 50%;
+     width: 33px;
+     height: 33px;
+}
+
+.header__user-navigation-user-cart-order-item-description {
+      width: 240px;
+      padding: 10px 4px;
+}
+.header__user-navigation-user-cart-order-item-weight {
+    width:120px;
+    padding: 10px 0;
+}
+
+.header__user-navigation-user-cart-order-item-price {
+     padding: 10px 0;
+}
+.header__user-navigation-user-cart-order-item-price-per-weight {
+       color: var(--lightest-grey);
+}
+.header__user-navigation-user-cart:hover .header__user-navigation-user-cart-container {
+    z-index: 1;
+}
+/*
 .header__user-navigation-user-cart-order {
     list-style: none;
     padding: 0;
@@ -1464,7 +1530,7 @@ img {
 
 .header__user-navigation-user-cart-order-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -1473,7 +1539,7 @@ img {
 .delete-button {
     width: 11px;
     height: 11px;
-    padding: 0;
+    padding: 0 9px 0;
     margin: 0;
     border: none;
     background-image: url("../img/icons/small-close.svg");
@@ -1487,23 +1553,21 @@ img {
     border-radius: 50%;
     width: 33px;
     height: 33px;
+    margin-right: 13px;
 }
 
 .header__user-navigation-user-cart-item-description {
-    padding: 0 40px 0 0;
+   margin-right: 31px;
 }
 
 .header__user-navigation-user-cart-item-weight {
     margin-right: 26px;
+    font-weight: var(--font-weight-regular);
 }
 
 .header__user-navigation-user-cart-item-price-per-weight {
     color: var(--lightest-grey);
     padding-left: 3px;
-}
-
-.header__user-navigation-user-cart-item-price {
-    margin-left: -15px;
 }
 
 .header__user-navigation-user-cart-order-item:not(:last-child) {
@@ -1516,7 +1580,8 @@ img {
 
 .header__user-navigation-user-cart:hover .header__user-navigation-user-cart-container {
     z-index: 1;
-}
+} */
+
 /*cart total*/
 .header__user-navigaion-user-cart-total {
     display: flex;
@@ -1880,7 +1945,6 @@ img {
     margin-left: 11px;
 }
 
-/*Надеюсь тут все правильно сделала*/
 .catalog__pagination-list-item.item-current {
     color: var(--text-dark);
     background-color: var(--white);
