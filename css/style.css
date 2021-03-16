@@ -197,8 +197,10 @@ img {
     color: var(--text-light);
     text-decoration: underline var(--border-transparent);
     text-underline-position: under;
-    padding: 5px 14px 8px 14px;
+    padding: 8px 14px 10px 14px;
+    /*  По макету у нас размеры 9, 14, 11, 14, но если уменьшаем все перестаёт ехать, как тут поступаем?*/
     display: block;
+    line-height: 1;
 }
 
 .header__site-navigation-item-link::after {
@@ -255,7 +257,7 @@ img {
     display: none;
     z-index: 8;
     min-width: 143px;
-    padding: 0 0 8px;
+    padding: 0 0 7px;
     margin: 0;
     font-size: 14px;
     font-weight: var(--font-weight-regular);
@@ -267,13 +269,14 @@ img {
 }
 
 .header__site-navigation-catalog-submenu-item {
-    padding: 7px 20px;
     position: relative;
 }
 
 .header__site-navigation-item-submenu-link {
     color: var(--text-dark);
     text-decoration: none;
+    display: block;
+    padding: 7px 20px;
 }
 
 .header__site-navigation-item-submenu-link-special {
@@ -281,11 +284,15 @@ img {
     font-weight: var(--font-weight-bold);
     color: var(--text-dark);
     text-decoration: none;
-    padding-top: 4px;
-    padding-bottom: 8px;
+    padding: 13px 64px 15px 21px;
     position: relative;
 }
-
+.header__site-navigation-item-submenu-link-special:hover {
+     background-color: var(--link-menu-hover);
+}
+.header__site-navigation-item-submenu-link-special:active {
+    background-color: var(--link-menu-pressed);
+}
 .header__site-navigation-catalog-submenu-item.special-item::after {
     content: "";
     position: absolute;
@@ -297,31 +304,28 @@ img {
 }
 
 .header__site-navigation-catalog-submenu-item-current {
-    background-color: var(--soft-red);
-    padding: 5px 21px 5px 20px;
-    display: block;
+   padding-top: 5px;
 }
 
 .header__site-navigation-item-submenu-link-current {
     color: var(--text-light);
     text-decoration: none;
+    display: block;
+    padding: 7px 20px;
+    background-color: var(--soft-red);
 }
 
 .header__site-navigation-catalog-submenu .header__site-navigation-catalog-submenu-item:nth-child(2) {
-    padding-top: 7px;
+    padding-top: 5px;
 }
 
-.header__site-navigation-catalog-submenu-item:hover {
+.header__site-navigation-item-submenu-link:hover {
     background-color: var(--link-menu-hover);
 }
-
-.header__site-navigation-item-submenu-link[href]:hover {
-    background-color: var(--link-menu-hover);
-} 
-
-.header__site-navigation-catalog-submenu-item:active {
+.header__site-navigation-item-submenu-link:active {
     background-color: var(--link-menu-pressed);
 }
+
 /*user navigation*/
 .header__user-navigation {
     font-size: 14px;
@@ -329,7 +333,7 @@ img {
     line-height: 16px;
     list-style: none;
     margin: 0 0 0 auto;
-    padding: 0;
+    padding-bottom: 6px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -532,7 +536,7 @@ img {
                                             /*Sliders*/
 .sliders {
     position: relative;
-    padding-top: 321px;
+    padding-top: 314px;
     margin-bottom: 41px;
     text-align: center;
 }
@@ -747,13 +751,13 @@ img {
 }
                                             /*Catalog hits*/
 .catalog-hits {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
 }
 
 .catalog__catalog-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 37px;
+    grid-row-gap: 35px;
     grid-column-gap: 26px;
     list-style: none;
     margin: 0;
@@ -790,7 +794,7 @@ img {
 
 .catalog__catalog-list-item-image {
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
     width: 267px;
     height: 267px;
 }
@@ -802,9 +806,9 @@ img {
 .catalog__catalog-list-item-title {
     color: var(--text-light);
     font-size: 16px;
+    line-height: 22px;
     padding: 0 5px;
     margin: 0;
-    line-height: 22px;
     font-weight: var(--font-weight-medium);
     text-decoration: underline var(--border-transparent);
     text-underline-position: under;
@@ -890,7 +894,7 @@ img {
     background-size: 1146px 306px;
     border-radius: 16px;
     margin-bottom: 40px;
-    padding: 24px 25px 30px 20px;
+    padding: 24px 26px 30px 20px;
 }
 
 .features__intro {
@@ -906,8 +910,8 @@ img {
     padding: 0;
     display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 27px;
-    grid-row-gap: 22px;
+    grid-column-gap: 33px;
+    grid-row-gap: 27px;
 }
 
 .features__features-list-item {
@@ -952,11 +956,12 @@ img {
 .features__features-list-item:nth-child(4) {
     margin-bottom: 0;
 }
+
                                             /*News and Subscription*/
 .news-and-subscription {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 26px;
+    grid-column-gap: 27px;
     margin-bottom: 40px;
 }
 
@@ -968,7 +973,7 @@ img {
     background-size: cover;
     background-color: var(--white);
     border-radius: 16px;
-    padding: 23px 253px 0 20px;
+    padding: 21px 253px 0 20px;
     width: 560px;
     box-sizing: border-box;
 }
@@ -976,6 +981,7 @@ img {
 .news-and-subscription__news-title {
     font-size: var(--font-body);
     margin: 0;
+    margin-bottom: -13px;
 }
 
 .news-and-subscription__news-link {
@@ -983,31 +989,32 @@ img {
     font-weight: var(--font-weight-bold);
     line-height: 30px;
     color: var(--text-dark);
-    text-decoration: underline;
+    text-decoration: underline var(--black);
 }
+/*Не пойму подчеркивание по макету, оно такое же как у ссылок в навигации или обычное?*/
 /*subscription*/
 .news-and-subscription__subscription {
-    border: 8px solid white;
-    border-image: url("../img/backgrounds/subscription-bg.svg") 10 round round;
-    background-color: var(--white);
+    background-image: url("../img/backgrounds/subscription-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 16px;
-    margin: 0;
-    padding: 0;
+    padding: 8px;    
 }
 
 .news-and-subscription__subscription-wrapper {
-    padding: 27px 16px 30px 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-
+     padding: 25px 17px 33px 18px;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-end;
+     background-color: var(--white);
+     border-radius: 16px;
 }
 
 .news-and-subscription__subscription-text {
     color: var(--text-medium);
-    margin: 0 0 41px 0;
+    margin: 0 0 40px 0;
 }
 
 .news-and-subscription__subscription-form {
@@ -1028,7 +1035,7 @@ img {
     box-shadow: var(--radish-box-shadow);
     text-shadow: var(--reddish-text-shadow);
     border-radius: 70px;
-    padding: 10px 20px;
+    padding: 11px 20px;
     border: none;
     margin-left: 10px;
     cursor: pointer;
@@ -1083,18 +1090,18 @@ img {
     line-height: 20px;
     color: var(--text-dark);
     width: var(--map-width);
-    margin: 0 auto;
+    width: 100%;
 }
-
+/*Правильно ли растянула?*/
 .contacts__map {
     width: 100%;
     height: 430px;
 }
-/*Правильно ли я встроила карту?*/
+
 .contacts__address {
     position: absolute;
     top: 62px;
-    right: 27px;
+    right: 90px;
     margin-left: auto;
     background-color: var(--white);
     border-radius: 19px;
@@ -1106,7 +1113,7 @@ img {
     justify-content: space-between;
     box-sizing: border-box;
 }
-
+/*Как здесь зафиксировать форму обратной связи? При изменении экрана она ездит сильно(*/
 .contacts__address-text {
     margin: 0;
     margin-bottom: 20px;
@@ -1159,7 +1166,7 @@ img {
 .footer {
     font-size: 13px;
     line-height: 18px;
-    padding: 18px 0 25px 0;
+    padding: 11px 0 23px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1168,7 +1175,7 @@ img {
 .footer__catalog {
     font-size: 13px;
     line-height: 18px;
-    padding: 18px 0 25px 0;
+    padding: 18px 0 23px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1179,37 +1186,41 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-top: 9px;
     display: flex;
     max-width: 310px;
     color: var(--text-light);
 }
-
+.footer__socials-list-button {
+  color:var(--transparent-bg);
+  text-decoration: none;
+  width: 32px;
+  height: 32px;
+}
+.footer__socials-list-button:hover {
+    color: var(--white);
+}
+/*Вышло все подключить и реагируют на цвет, но как покрасить отдельный элемент при наведении? Они должны быть белыми внутри и светлая бордер( */
 .footer__socials-list-item:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 .footer__service-info {
+    width: 330px;
+    padding-top: 8px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-
-.footer__socials-list-button {
-    color: white;
-    text-decoration: none;
-    width: 32px;
-    height: 32px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer__service-info-list-right {
     list-style: none;
     margin: 0;
-    padding-right: 42px;
+    padding-left: 25px;
 }
 
 .footer__service-info-list-right-item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .footer__service-info-link {
@@ -1241,7 +1252,7 @@ img {
 }
 
 .footer__service-info-list-left-item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .footer__copyright {
@@ -1284,7 +1295,7 @@ img {
     bottom: 0;
     left: 0;
     background-color: var(--modal-container-bg);
-    display: none;
+/*    display: none;*/
 }
 
 .modal-feedback__form-container {
@@ -1302,6 +1313,7 @@ img {
     border-radius: 6px;
     background-color: var(--light-yellow);
     box-sizing: border-box;
+    width: 477px;
 }
 
 .modal-feedback-title {
@@ -1318,29 +1330,30 @@ img {
 
 .modal-feedback__form-input {
     min-width: 267px;
-    padding: 10px 14px;
+    padding: 11px 14px;
     border: 1px solid var(--border-input);
     border-radius: 4px;
     background-color: var(--text-light);
     font-size: 16px;
     line-height: 20px;
     box-sizing: border-box;
+    color: var( --input-grey);
 }
-
+/*Честно запуталась как сделать введённый текст жирным не меняя основной placeholder */
 .modal-feedback__form-input:hover {
-    padding: 9px 13px;
-    border: 2px solid var(--border-input);
+    padding: 9px 12px;
+    border: 3px solid var(--border-input);
 }
 
 .modal-feedback__form-input:focus {
-    padding: 9px 13px;
-    border: var(--border-input-focus);
+     padding: 11px 14px;
+     border: var(--border-input-focus);
 }
 
 .modal-feedback__form-textarea {
     height: 154px;
-    width: 428px;
-    padding-top: 14px;
+    width: 100%;
+    padding: 14px;
     border: 1px solid var(--border-input);
     border-radius: 4px;
     background-color: var(--text-light);
@@ -1359,7 +1372,6 @@ img {
     border: none;
     border-radius: 70px;
     align-self: flex-end;
-    margin: 8px 0 0 0;
     padding: 10px 24px;
 }
 
@@ -1386,6 +1398,7 @@ img {
 .catalog-title {
     order: 2;
     margin: 0;
+    padding: 0;
     font-size: 35px;
     line-height: 41px;
 }
@@ -1394,7 +1407,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0;
+   margin-bottom: -8px;
     padding: 0;
 }
 
@@ -1471,13 +1484,12 @@ img {
     border-collapse: collapse;
 }
 .header__user-navigation-user-cart-order-table td {
-        padding-bottom: 18px;
+        padding-bottom: 16px;
+        padding-left: 4px;
+        padding-right: 7px;
 }
-/*Как здесь корректней прописать чтоб обращение не через td делать? И как продлить бордер Боттом до конца?*/
-.header__user-navigation-user-cart-order-item-one {
-     vertical-align: top;
-}
-.header__user-navigation-user-cart-order-item-two {
+/*То как сделала достаточно? Я уже где только можно подкрутила(*/
+.header__user-navigation-user-cart-order-item {
     vertical-align: top;
 }
 .delete-button {
@@ -1490,9 +1502,10 @@ img {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-color: var(--transparent-bg);
+    cursor: pointer;   
 }
 .header__user-navigation-user-cart-order-item-thumbnail {
-     padding: 0 13px 0 9px;
+     padding: 0 9px 0 13px;
 }
 .header__user-navigation-user-cart-item-image {
      border-radius: 50%;
@@ -1502,15 +1515,15 @@ img {
 
 .header__user-navigation-user-cart-order-item-description {
       width: 240px;
-      padding: 10px 4px;
+      padding: 11px 3px;
 }
 .header__user-navigation-user-cart-order-item-weight {
-    width:120px;
-    padding: 10px 0;
+    width:110px;
+    padding: 11px 5px;
 }
 
 .header__user-navigation-user-cart-order-item-price {
-     padding: 10px 0;
+     padding: 11px 4px;
 }
 .header__user-navigation-user-cart-order-item-price-per-weight {
        color: var(--lightest-grey);
@@ -1518,69 +1531,6 @@ img {
 .header__user-navigation-user-cart:hover .header__user-navigation-user-cart-container {
     z-index: 1;
 }
-/*
-.header__user-navigation-user-cart-order {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid var(--mid-grey);
-}
-
-.header__user-navigation-user-cart-order-item {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.delete-button {
-    width: 11px;
-    height: 11px;
-    padding: 0 9px 0;
-    margin: 0;
-    border: none;
-    background-image: url("../img/icons/small-close.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-color: var(--transparent-bg);
-    align-self: center;
-}
-
-.header__user-navigation-user-cart-item-image {
-    border-radius: 50%;
-    width: 33px;
-    height: 33px;
-    margin-right: 13px;
-}
-
-.header__user-navigation-user-cart-item-description {
-   margin-right: 31px;
-}
-
-.header__user-navigation-user-cart-item-weight {
-    margin-right: 26px;
-    font-weight: var(--font-weight-regular);
-}
-
-.header__user-navigation-user-cart-item-price-per-weight {
-    color: var(--lightest-grey);
-    padding-left: 3px;
-}
-
-.header__user-navigation-user-cart-order-item:not(:last-child) {
-    margin-bottom: 19px;
-}
-
-.header__user-navigation-user-cart-order-item:last-child {
-    margin-bottom: 18px
-}
-
-.header__user-navigation-user-cart:hover .header__user-navigation-user-cart-container {
-    z-index: 1;
-} */
 
 /*cart total*/
 .header__user-navigaion-user-cart-total {
@@ -1594,16 +1544,18 @@ img {
 
 .header__user-navigation-user-cart-table-total-price {
     display: block;
-    margin: 15px 0 18px 0;
+    margin-bottom: 16px;
+    margin-top: 17px;
     font-size: 15px;
+    line-height: 16px;
     font-weight: var(--font-weight-bold);
     color: var(--text-dark);
 }
 
 .header__user-navigation-user-cart-table-order-button {
     font-size: 18px;
-    line-height: 24px;
-    padding: 9px 16px 10px;
+    line-height:16px;
+    padding: 13px 15px 13px 15px;
     font-weight: var(--font-weight-bold);
     text-decoration: none;
     color: var(--text-light);
@@ -1611,6 +1563,7 @@ img {
     border: none;
     border-radius: 26px;
     box-shadow: var(--reddish-shadow);
+    box-sizing: border-box;
 }
 
 .header__user-navigation-user-cart-table-order-button:hover {
@@ -1631,7 +1584,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: -14px;
+    margin-bottom: -13px;
     box-sizing: border-box;
 }
 
@@ -1822,9 +1775,20 @@ img {
     border-radius: 20px;
 }
 
-.filters__filters-form-taste-filter-list-item:not(:last-child) {
-    margin-right: 22px;
+
+.filters__filters-form-taste-filter-list-item:nth-child(1) {
+     margin-right: 21px;
 }
+.filters__filters-form-taste-filter-list-item:nth-child(2) {
+     margin-right: 25px;
+}
+.filters__filters-form-taste-filter-list-item:nth-child(3) {
+     margin-right: 28px;
+}
+.filters__filters-form-taste-filter-list-item:nth-child(4) {
+    margin-right: 23px;
+}
+/*Если ввести значения так- все встаёт ровно, нужно оставить общий отступ для всех?*/
 
 .checkbox-input {
     appearance: none;
@@ -1850,6 +1814,7 @@ img {
     opacity: 0.8;
 }
 
+/*Как правильно сдвинуть последние три фильтра?*/
 .checkbox-input:checked + .taste-filter-label::before {
     background-image: url(../img/icons/checkbox-on.svg);
 }
@@ -1863,8 +1828,8 @@ img {
 }
 
 .filters__filters-form-button {
-    margin-top: 10px;
-    padding: 9px 29px;
+    margin-top: 11px;
+    padding: 9px 28px;
     height: 36px;
     text-align: center;
     font-weight: var(--font-weight-medium);
@@ -1897,7 +1862,7 @@ img {
 }
 
 .catalog .catalog__catalog-list {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
 }
 /*pagination list*/
 .catalog__pagination {
@@ -1910,7 +1875,7 @@ img {
 .catalog__pagination-list {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
 }
@@ -1926,9 +1891,9 @@ img {
 }
 
 .catalog__pagination-list-item:not(:last-child) {
-    margin-right: 4px;
+    margin-right: 6px;
 }
-
+/*Выровняла по 3 и 4 сходятся не ровно(*/
 .catalog__pagination-button {
     width: 7px;
     height: 12px;
@@ -1945,41 +1910,32 @@ img {
     margin-left: 11px;
 }
 
-.catalog__pagination-list-item.item-current {
-    color: var(--text-dark);
-    background-color: var(--white);
-
-}
-
-.catalog__pagination-list-item-link-current {
-    text-decoration: none;
-    color: var(--text-dark);
-}
-
 .catalog__pagination-list-item-link {
     text-decoration: none;
     color: var(--text-light);
     font-size: 16px;
+    line-height: 18px;
     font-weight: var(--font-weight-medium);
 }
-
 .catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
 }
-
 .catalog__catalog-list-item-button:active {
     background-image: var(--button-pressed);
 }
-
 .catalog__pagination-list-item:hover {
     background-color: var(--border-transparent);
 }
-
 .catalog__pagination-list-item:active {
     background-color: var(--white);
     border-radius: 50%;
 }
-
 .catalog__pagination-list-item-link:active {
     color: var(--text-dark);
+}
+.catalog__pagination-list-item.item-current {
+    color: var(--text-dark);
+    background-color: var(--white);
+    cursor: pointer;
+
 }
