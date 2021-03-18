@@ -370,10 +370,14 @@ img {
     height: 44px;
     font-size: 14px;
     line-height: 16px;
-    padding: 15px 199px 15px 15px;
+    font-weight: var(--font-weight-bold);
+    padding: 15px;
     border: 1px solid var(--border-input);
     border-radius: 4px;
     background-color: var(--text-light);
+}
+.input-search::placeholder {
+     font-weight: var(--font-weight-regular);
 }
 .header__user-navigation-user-search-form-button {
     padding: 8px;
@@ -447,7 +451,15 @@ img {
     border-radius: 4px;
     background-color: var(--text-light);
 }
+.input-email {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: var(--font-weight-bold);
+}
 
+.input-email::placeholder {
+    font-weight: var(--font-weight-regular);
+}
 .header__user-navigation-user-login-form-popup-login-help {
     display: flex;
     align-items: center;
@@ -1193,14 +1205,19 @@ img {
 }
 .footer__socials-list-button {
   color:var(--transparent-bg);
+    opacity: 0.8;
   text-decoration: none;
   width: 32px;
   height: 32px;
 }
 .footer__socials-list-button:hover {
-    color: var(--white);
+    opacity: 1;
 }
-/*Вышло все подключить и реагируют на цвет, но как покрасить отдельный элемент при наведении? Они должны быть белыми внутри и светлая бордер( */
+
+.footer__socials-list-button:active {
+    opacity: 1.5;
+}
+/*Все работает но нажатие должно быть ещё белее или все правильно? */
 .footer__socials-list-item:not(:last-child) {
     margin-right: 8px;
 }
@@ -1295,7 +1312,7 @@ img {
     bottom: 0;
     left: 0;
     background-color: var(--modal-container-bg);
-/*    display: none;*/
+    display: none;
 }
 
 .modal-feedback__form-container {
@@ -1336,18 +1353,23 @@ img {
     background-color: var(--text-light);
     font-size: 16px;
     line-height: 20px;
+    font-weight: var(--font-weight-bold);
     box-sizing: border-box;
-    color: var( --input-grey);
+    color: var(--black);
 }
-/*Честно запуталась как сделать введённый текст жирным не меняя основной placeholder */
+.modal-feedback__form-input::placeholder {
+    font-weight: var(--font-weight-regular);
+    color: var(--input-grey)
+}
+
 .modal-feedback__form-input:hover {
     padding: 9px 12px;
     border: 3px solid var(--border-input);
 }
 
 .modal-feedback__form-input:focus {
-     padding: 11px 14px;
-     border: var(--border-input-focus);
+    padding: 10px 13px;
+    border: var(--border-input-focus);
 }
 
 .modal-feedback__form-textarea {
@@ -1632,6 +1654,7 @@ img {
 .sorting-filter-list:hover {
     color: var(--text-dark);
 }
+
 /*price filter*/
 .filters__filters-form-price-range-filter {
     border: none;
@@ -1685,6 +1708,11 @@ img {
 .toggle-max {
     left: 132px;
 }
+
+.toggle:hover {
+ transform: scale(1.1);
+}
+/*Нашла на htmlbook что можно так, правильно же?*/
 /*fat filter*/
 .filters__filters-form-fat-filter {
     border: none;
@@ -1774,8 +1802,6 @@ img {
     background-color: var(--border-transparent);
     border-radius: 20px;
 }
-
-
 .filters__filters-form-taste-filter-list-item:nth-child(1) {
      margin-right: 21px;
 }
@@ -1814,7 +1840,7 @@ img {
     opacity: 0.8;
 }
 
-/*Как правильно сдвинуть последние три фильтра?*/
+/*Как правильно сдвинуть последние три фильтра? */
 .checkbox-input:checked + .taste-filter-label::before {
     background-image: url(../img/icons/checkbox-on.svg);
 }
@@ -1937,5 +1963,4 @@ img {
     color: var(--text-dark);
     background-color: var(--white);
     cursor: pointer;
-
 }
