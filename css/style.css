@@ -809,7 +809,7 @@ img {
     background-position: center;
     background-color: var(--raspberry-offer-bg);
     border-radius: 16px;
-    padding: 14px 22px 22px 16px;
+    padding: 14px 22px 20px 16px;
 }
 
 .offers__raspberry-offer-title {
@@ -841,7 +841,7 @@ img {
     background-image: var(--button-rest);
     box-shadow: var(--radish-box-shadow);
     border-radius: 70px;
-    padding: 12px 22px;
+    padding: 11px 22px;
 }
 
 .offers__chocolate-offer {
@@ -883,7 +883,7 @@ img {
     background-image: var(--button-rest);
     box-shadow: var(--radish-box-shadow);
     border-radius: 70px;
-    padding: 12px 22px;
+    padding: 11px 22px;
 }
 
                                                 /*Offers buttons behaviour*/
@@ -918,14 +918,14 @@ img {
 }
 
 .catalog .catalog__catalog-list {
-    margin-bottom: 75px;
+    margin-bottom: 79px;
 }
 
 .catalog__catalog-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 35px;
-    grid-column-gap: 26px;
+    grid-row-gap: 36px;
+    grid-column-gap: 25px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -961,7 +961,7 @@ img {
 
 .catalog__catalog-list-item-image {
     border-radius: 50%;
-    margin-bottom: 11px;
+    margin-bottom: 6px;
     width: 267px;
     height: 267px;
 }
@@ -1078,8 +1078,8 @@ img {
     padding: 0;
     display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 33px;
-    grid-row-gap: 27px;
+    grid-column-gap: 31px;
+    grid-row-gap: 22px;
 }
 
 .features__features-list-item {
@@ -1130,7 +1130,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 27px;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
 }
 
                                                 /*News*/
@@ -1141,7 +1141,7 @@ img {
     background-size: cover;
     background-color: var(--white);
     border-radius: 16px;
-    padding: 21px 253px 0 20px;
+    padding: 19px 253px 0 20px;
     width: 560px;
     box-sizing: border-box;
 }
@@ -1149,7 +1149,8 @@ img {
 .news-and-subscription__news-title {
     font-size: var(--font-body);
     margin: 0;
-    margin-bottom: -13px;
+    margin-bottom: -14px;
+    padding: 0;
 }
 
 .news-and-subscription__news-link {
@@ -1170,7 +1171,7 @@ img {
 }
 
 .news-and-subscription__subscription-wrapper {
-    padding: 25px 17px 33px 18px;
+    padding: 21px 17px 31px 18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1335,7 +1336,7 @@ img {
 .footer {
     font-size: 13px;
     line-height: 18px;
-    padding: 11px 0 23px 0;
+    padding: 12px 0 23px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1344,7 +1345,7 @@ img {
 .footer__catalog {
     font-size: 13px;
     line-height: 18px;
-    padding: 18px 0 23px 0;
+    padding: 17px 0 23px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1355,7 +1356,7 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-top: 9px;
+    padding-top:10px;
     display: flex;
     max-width: 310px;
     color: var(--text-light);
@@ -1648,7 +1649,7 @@ img {
 }
 
 .filter-legend {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
     padding-left: 16px;
     font-size: 14px;
     line-height: 16px;
@@ -1675,6 +1676,8 @@ img {
     border-radius: 20px;
     background-color: var(--border-transparent);
     appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 .sorting-filter-list-arrow {
@@ -1703,7 +1706,7 @@ img {
     position: relative;
     width: 218px;
     height: 36px;
-    padding: 18px 21px;
+    padding: 15px 21px;
     margin: 0;
     background-color: var(--border-transparent);
     border-radius: 20px;
@@ -1725,7 +1728,7 @@ img {
 
 .toggle {
     position: absolute;
-    top: 9px;
+    top: 6px;
     left: 0;
     width: 4px;
     height: 4px;
@@ -1738,11 +1741,11 @@ img {
 }
 
 .toggle-min {
-    left: 34px;
+    left: 32px;
 }
 
 .toggle-max {
-    left: 132px;
+    left: 130px;
 }
 
 .toggle:hover {
@@ -1891,7 +1894,7 @@ img {
 }
 
 .filters__filters-form-button {
-    margin-top: 11px;
+    margin-top: 10px;
     padding: 9px 28px;
     height: 36px;
     text-align: center;
