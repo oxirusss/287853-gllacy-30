@@ -137,7 +137,7 @@ img {
     display: grid;
     grid-template-rows: auto auto;
     width: 1146px;
-    padding: 8px 0 0 0;
+    padding: 1px 0 0 0;
 }
 
 .header__contacts {
@@ -216,7 +216,7 @@ img {
     text-decoration: none;
     background-color: var(--soft-red);
     border-radius: 26px;
-    padding: 5px 14px 8px 14px;
+    padding: 7px 15px 7px 15px;
     display: block;
 }
 
@@ -689,7 +689,7 @@ img {
 .sliders {
     position: relative;
     padding-top: 314px;
-    margin-bottom: 41px;
+    margin-bottom: 44px;
     text-align: center;
 }
 
@@ -721,7 +721,7 @@ img {
     line-height: 60px;
     font-weight: var(--font-weight-bold);
     margin: 0 auto;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
 }
 
 .sliders__sliders-list-item-button {
@@ -733,7 +733,7 @@ img {
     text-decoration: none;
     color: var(--text-light);
     background-image: var(--button-rest);
-    padding: 9px 23px;
+    padding: 7px 23px;
     border-radius: 70px;
     letter-spacing: 0.05em;
     text-shadow: var(--reddish-text-shadow);
@@ -743,7 +743,7 @@ img {
 
 .sliders__sliders-controls {
     position: absolute;
-    bottom: 23px;
+    bottom: 20px;
     left: 0;
     z-index: 20;
     display: flex;
@@ -799,7 +799,7 @@ img {
     grid-column-gap: 26px;
     margin: 0;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 }
 
 .offers__raspberry-offer {
@@ -809,14 +809,14 @@ img {
     background-position: center;
     background-color: var(--raspberry-offer-bg);
     border-radius: 16px;
-    padding: 14px 22px 20px 16px;
+    padding: 15px 22px 20px 16px;
 }
 
 .offers__raspberry-offer-title {
     font-size: 35px;
     line-height: 41px;
     padding: 0;
-    margin: 0 0 17px;
+    margin: 0 0 16px;
 }
 
 .offers__raspberry-offer-text {
@@ -851,14 +851,14 @@ img {
     background-position: center;
     background-color: var(--chocolate-offer-bg);
     border-radius: 16px;
-    padding: 14px 22px 22px 16px;
+    padding: 15px 22px 20px 16px;
 }
 
 .offers__chocolate-offer-title {
     font-size: 35px;
     line-height: 41px;
     padding: 0;
-    margin: 0 0 17px;
+    margin: 0 0 16px;
 }
 
 .offers__chocolate-offer-text {
@@ -918,14 +918,14 @@ img {
 }
 
 .catalog .catalog__catalog-list {
-    margin-bottom: 79px;
+    margin-bottom: 78px;
 }
 
 .catalog__catalog-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 36px;
-    grid-column-gap: 25px;
+    grid-row-gap: 37px;
+    grid-column-gap: 26px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1336,7 +1336,7 @@ img {
 .footer {
     font-size: 13px;
     line-height: 18px;
-    padding: 12px 0 23px 0;
+    padding: 13px 0 23px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1345,7 +1345,7 @@ img {
 .footer__catalog {
     font-size: 13px;
     line-height: 18px;
-    padding: 17px 0 23px 0;
+    padding: 17px 0 22px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1384,7 +1384,7 @@ img {
 
 .footer__service-info {
     width: 330px;
-    padding-top: 8px;
+    padding-top: 9px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1397,7 +1397,7 @@ img {
 }
 
 .footer__service-info-list-right-item:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .footer__service-info-link {
@@ -1429,7 +1429,7 @@ img {
 }
 
 .footer__service-info-list-left-item:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .footer__copyright {
@@ -1576,7 +1576,7 @@ img {
 .wrapper-main {
     display: flex;
     flex-direction: column;
-    margin-bottom: 29px;
+    margin-bottom: 26px;
 }
 
 .catalog-title {
@@ -1591,7 +1591,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: -8px;
+    margin-bottom: -6px;
     padding: 0;
 }
 
@@ -1644,7 +1644,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: -13px;
+    margin-bottom: -12px;
     box-sizing: border-box;
 }
 
@@ -1706,7 +1706,7 @@ img {
     position: relative;
     width: 218px;
     height: 36px;
-    padding: 15px 21px;
+    padding: 17px 21px;
     margin: 0;
     background-color: var(--border-transparent);
     border-radius: 20px;
@@ -1728,7 +1728,7 @@ img {
 
 .toggle {
     position: absolute;
-    top: 6px;
+    top: 7px;
     left: 0;
     width: 4px;
     height: 4px;
@@ -1741,11 +1741,11 @@ img {
 }
 
 .toggle-min {
-    left: 32px;
+    left: 33px;
 }
 
 .toggle-max {
-    left: 130px;
+    left: 131px;
 }
 
 .toggle:hover {
@@ -1835,7 +1835,7 @@ img {
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-    padding: 13px 19px 10px 16px;
+    padding: 12px 19px 10px 16px;
     box-sizing: border-box;
     height: 36px;
     background-color: var(--border-transparent);
@@ -1960,7 +1960,7 @@ img {
 }
 
 .button-forward {
-    margin-left: 11px;
+    margin-left: 9px;
 }
 
 .catalog__pagination-list-item-link {
