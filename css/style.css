@@ -1,4 +1,4 @@
-                                    /* Variables */
+                                                /* Variables */
 :root {
     /*Palette*/
     --black: #323232;
@@ -89,9 +89,7 @@
     --features-bg:#fff1d9;
 }
 
-
-
-                                            /* Global */
+                                                /* Global */
 body {
     min-width: 1200px;
     margin: 0 auto;
@@ -133,18 +131,19 @@ img {
     width: 1px;
     overflow: hidden;
 }
-                                            /*Header*/
+
+                                                /*Header*/
 .header {
     display: grid;
     grid-template-rows: auto auto;
     width: 1146px;
-    padding-top: 8px;
+    padding: 8px 0 0 0;
 }
 
 .header__contacts {
     justify-self: end;
     margin: 0 0 -40px auto;
-    padding-top: 3px;
+    padding: 3px 0 0 0;
 }
 
 .header__contacts-info {
@@ -170,15 +169,16 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 9px;
+    padding: 9px 0 0 0;
 }
 
 .header__logo {
     height: 64px;
     width: 154;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
 }
-/*site navigation*/
+
+                                                /*Site navigation*/
 .header__site-navigation {
     list-style: none;
     padding: 0 0 6px;
@@ -190,7 +190,7 @@ img {
 }
 
 .header__site-navigation-item:not(:last-child) {
-    margin-right: 4px;
+    margin: 0 4px 0 0;
 }
 
 .header__site-navigation-item-link {
@@ -198,7 +198,6 @@ img {
     text-decoration: underline var(--border-transparent);
     text-underline-position: under;
     padding: 8px 14px 10px 14px;
-    /*  По макету у нас размеры 9, 14, 11, 14, но если уменьшаем все перестаёт ехать, как тут поступаем?*/
     display: block;
     line-height: 1;
 }
@@ -210,6 +209,15 @@ img {
     height: 20px;
     left: 0;
     bottom: -20px;
+}
+
+.header__site-navigation-item-current {
+    color: var(--text-light);
+    text-decoration: none;
+    background-color: var(--soft-red);
+    border-radius: 26px;
+    padding: 5px 14px 8px 14px;
+    display: block;
 }
 
 .header__site-navigation-item-current::after {
@@ -232,7 +240,6 @@ img {
     background-color: var(--fade-grey);
 }
 
-
 .header__user-navigation-user-login-form-link::after {
     content: "";
     position: absolute;
@@ -241,7 +248,8 @@ img {
     left: 0;
     bottom: -20px;
 }
-/*site navigation submenu*/
+
+                                                /*Site navigation submenu*/
 .catalog-item-link {
     position: relative;
 }
@@ -287,12 +295,15 @@ img {
     padding: 13px 64px 15px 21px;
     position: relative;
 }
+
 .header__site-navigation-item-submenu-link-special:hover {
-     background-color: var(--link-menu-hover);
+    background-color: var(--link-menu-hover);
 }
+
 .header__site-navigation-item-submenu-link-special:active {
     background-color: var(--link-menu-pressed);
 }
+
 .header__site-navigation-catalog-submenu-item.special-item::after {
     content: "";
     position: absolute;
@@ -304,7 +315,7 @@ img {
 }
 
 .header__site-navigation-catalog-submenu-item-current {
-   padding-top: 5px;
+    padding: 5px 0 0 0;
 }
 
 .header__site-navigation-item-submenu-link-current {
@@ -316,32 +327,33 @@ img {
 }
 
 .header__site-navigation-catalog-submenu .header__site-navigation-catalog-submenu-item:nth-child(2) {
-    padding-top: 5px;
+    padding: 5px 0 0 0;
 }
 
 .header__site-navigation-item-submenu-link:hover {
     background-color: var(--link-menu-hover);
 }
+
 .header__site-navigation-item-submenu-link:active {
     background-color: var(--link-menu-pressed);
 }
 
-/*user navigation*/
+                                                /*User navigation*/
 .header__user-navigation {
     font-size: 14px;
     font-weight: var(--font-weight-medium);
     line-height: 16px;
     list-style: none;
     margin: 0 0 0 auto;
-    padding-bottom: 6px;
+    padding: 0 0 6px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-/*user search*/
+                                                /*User search*/
 .header__user-navigation-user-search {
-    margin-right: 10px;
+    margin: 0 10px 0 0;
 }
 
 .header__user-navigation-user-search-form {
@@ -376,9 +388,11 @@ img {
     border-radius: 4px;
     background-color: var(--text-light);
 }
+
 .input-search::placeholder {
-     font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-regular);
 }
+
 .header__user-navigation-user-search-form-button {
     padding: 8px;
     color: var(--text-light);
@@ -390,6 +404,7 @@ img {
     justify-content: center;
     cursor: pointer;
 }
+
 .header__user-navigation-user-search-form-button:hover {
     color: var(--text-dark);
     background-color: var(--light-background);
@@ -404,7 +419,7 @@ img {
     bottom: -20px;
 }
 
-/*user login*/
+                                                /*User login*/
 .header__user-navigation-user-login-form-link {
     display: flex;
     align-items: center;
@@ -418,10 +433,10 @@ img {
 }
 
 .header__user-navigation-user-login-form-link span {
-    padding-left: 8px;
+    padding: 0 0 0 8px;
 }
 
-/*user login pop-up*/
+                                                /*User login pop-up*/
 .header__user-navigation-user-login-form {
     position: relative;
 }
@@ -451,6 +466,7 @@ img {
     border-radius: 4px;
     background-color: var(--text-light);
 }
+
 .input-email {
     font-size: 14px;
     line-height: 16px;
@@ -460,6 +476,7 @@ img {
 .input-email::placeholder {
     font-weight: var(--font-weight-regular);
 }
+
 .header__user-navigation-user-login-form-popup-login-help {
     display: flex;
     align-items: center;
@@ -505,7 +522,7 @@ img {
     text-underline-position: under;
 }
 
-/*user cart*/
+                                                /*User cart*/
 .header__user-navigation-user-cart-empty {
     display: flex;
     align-items: center;
@@ -518,7 +535,7 @@ img {
 }
 
 .header__user-navigation-user-cart-empty span {
-    padding-left: 8px;
+    padding: 0 0 0 8px;
 }
 
 .header__user-navigation-user-cart-full {
@@ -545,7 +562,130 @@ img {
     color: var(--text-dark)
 }
 
-                                            /*Sliders*/
+                                                /*User full cart */
+.header__user-navigation-user-cart {
+    position: relative;
+}
+
+.header__user-navigation-user-cart-container {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    min-width: 539px;
+    padding: 20px 14px 21px 15px;
+    box-sizing: border-box;
+    background-color: var(--light-yellow);
+    color: var(--text-dark);
+    box-shadow: var(--light-shadow);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: var(--font-weight-regular);
+    z-index: -1;
+}
+
+.header__user-navigation-user-cart-order-table {
+    border-bottom: 1px solid var(--mid-grey);
+    border-collapse: collapse;
+}
+
+.header__user-navigation-user-cart-order-table td {
+    padding-bottom: 16px;
+    padding-left: 4px;
+    padding-right: 7px;
+}
+
+.header__user-navigation-user-cart-order-item {
+    vertical-align: top;
+}
+
+.delete-button {
+    width: 11px;
+    height: 11px;
+    padding: 0 0 10px;
+    margin: 0;
+    border: none;
+    background-image: url("../img/icons/small-close.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: var(--transparent-bg);
+    cursor: pointer;
+}
+
+.header__user-navigation-user-cart-order-item-thumbnail {
+    padding: 0 9px 0 13px;
+}
+
+.header__user-navigation-user-cart-item-image {
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+}
+
+.header__user-navigation-user-cart-order-item-description {
+    width: 240px;
+    padding: 11px 3px;
+}
+
+.header__user-navigation-user-cart-order-item-weight {
+    width: 110px;
+    padding: 11px 5px;
+}
+
+.header__user-navigation-user-cart-order-item-price {
+    padding: 11px 4px;
+}
+
+.header__user-navigation-user-cart-order-item-price-per-weight {
+    color: var(--lightest-grey);
+}
+
+.header__user-navigation-user-cart:hover .header__user-navigation-user-cart-container {
+    z-index: 1;
+}
+
+                                                /*Cart total*/
+.header__user-navigaion-user-cart-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.header__user-navigation-user-cart-table-total-price {
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 17px;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
+}
+
+.header__user-navigation-user-cart-table-order-button {
+    font-size: 18px;
+    line-height: 16px;
+    padding: 13px 15px 13px 15px;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    color: var(--text-light);
+    background-image: var(--button-rest);
+    border: none;
+    border-radius: 26px;
+    box-shadow: var(--reddish-shadow);
+    box-sizing: border-box;
+}
+
+.header__user-navigation-user-cart-table-order-button:hover {
+    background-image: var(--button-hover);
+}
+
+.header__user-navigation-user-cart-table-order-button:active {
+    background-image: var(--button-pressed);
+}
+
+                                                /*Sliders*/
 .sliders {
     position: relative;
     padding-top: 314px;
@@ -649,7 +789,8 @@ img {
 .sliders__sliders-controls-button:hover {
     background: var(--sliders-button-bg);
 }
-                                            /*Offers*/
+
+                                                /*Offers*/
 .offers {
     font-size: 18px;
     font-weight: var(--font-weight-bold);
@@ -745,7 +886,7 @@ img {
     padding: 12px 22px;
 }
 
-/*offers buttons behaviour*/
+                                                /*Offers buttons behaviour*/
 .offers__raspberry-offer-button:hover {
     background-image: var(--button-hover);
 }
@@ -761,9 +902,23 @@ img {
 .offers__chocolate-offer-button:active {
     background-image: var(--button-pressed);
 }
-                                            /*Catalog hits*/
+
+                                                /*Catalog and catalog hits*/
 .catalog-hits {
     margin-bottom: 41px;
+}
+
+.site-wrapper-catalog {
+    background-color: var(--slider-one-dark);
+}
+
+.catalog {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.catalog .catalog__catalog-list {
+    margin-bottom: 75px;
 }
 
 .catalog__catalog-list {
@@ -896,7 +1051,8 @@ img {
     background-image: var(--button-pressed);
     box-shadow: var(--red-box-shadow);
 }
-                                            /*Features*/
+
+                                                /*Features*/
 .features {
     color: var(--text-dark);
     background-image: url(../img/backgrounds/waffle-bg.jpg);
@@ -969,7 +1125,7 @@ img {
     margin-bottom: 0;
 }
 
-                                            /*News and Subscription*/
+                                                /*News and Subscription*/
 .news-and-subscription {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -977,7 +1133,7 @@ img {
     margin-bottom: 40px;
 }
 
-/*news*/
+                                                /*News*/
 .news-and-subscription__news {
     color: var(--text-dark);
     background-image: url(../img/backgrounds/blog-bg.jpg);
@@ -1003,25 +1159,25 @@ img {
     color: var(--text-dark);
     text-decoration: underline var(--black);
 }
-/*Не пойму подчеркивание по макету, оно такое же как у ссылок в навигации или обычное?*/
-/*subscription*/
+
+                                                /*Subscription*/
 .news-and-subscription__subscription {
     background-image: url("../img/backgrounds/subscription-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 16px;
-    padding: 8px;    
+    padding: 8px;
 }
 
 .news-and-subscription__subscription-wrapper {
-     padding: 25px 17px 33px 18px;
-     box-sizing: border-box;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: flex-end;
-     background-color: var(--white);
-     border-radius: 16px;
+    padding: 25px 17px 33px 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--white);
+    border-radius: 16px;
 }
 
 .news-and-subscription__subscription-text {
@@ -1069,7 +1225,6 @@ img {
     color: var(--input-grey);
 }
 
-/*forms styles*/
 .news-and-subscription__subscription-form-input:hover {
     padding: 14px 202px 13px 13px;
     border: 2px solid var(--border-input);
@@ -1094,8 +1249,9 @@ img {
 
 .news-and-subscription__news-link:hover {
     color: var(--link-pressed);
-}
-                                            /*Contacts*/
+}                                
+
+                                                /*Contacts*/
 .contacts {
     position: relative;
     font-size: 14px;
@@ -1104,7 +1260,7 @@ img {
     width: var(--map-width);
     width: 100%;
 }
-/*Правильно ли растянула?*/
+
 .contacts__map {
     width: 100%;
     height: 430px;
@@ -1125,7 +1281,7 @@ img {
     justify-content: space-between;
     box-sizing: border-box;
 }
-/*Как здесь зафиксировать форму обратной связи? При изменении экрана она ездит сильно(*/
+
 .contacts__address-text {
     margin: 0;
     margin-bottom: 20px;
@@ -1174,7 +1330,8 @@ img {
 .contacts__button:active {
     background-image: var(--button-pressed);
 }
-                                            /*Footer*/
+
+                                                /*Footer*/
 .footer {
     font-size: 13px;
     line-height: 18px;
@@ -1203,13 +1360,15 @@ img {
     max-width: 310px;
     color: var(--text-light);
 }
+
 .footer__socials-list-button {
-  color:var(--transparent-bg);
+    color: var(--transparent-bg);
     opacity: 0.8;
-  text-decoration: none;
-  width: 32px;
-  height: 32px;
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
 }
+
 .footer__socials-list-button:hover {
     opacity: 1;
 }
@@ -1217,7 +1376,7 @@ img {
 .footer__socials-list-button:active {
     opacity: 1.5;
 }
-/*Все работает но нажатие должно быть ещё белее или все правильно? */
+
 .footer__socials-list-item:not(:last-child) {
     margin-right: 8px;
 }
@@ -1304,7 +1463,8 @@ img {
 .footer__socials-list-button:active {
     border-color: var(--socials-border);
 }
-                                            /*Modal*/
+
+                                                /*Modal*/
 .modal-feedback {
     position: fixed;
     top: 0;
@@ -1357,6 +1517,7 @@ img {
     box-sizing: border-box;
     color: var(--black);
 }
+
 .modal-feedback__form-input::placeholder {
     font-weight: var(--font-weight-regular);
     color: var(--input-grey)
@@ -1408,9 +1569,9 @@ img {
     background-color: transparent;
     border: none;
 }
-                                            /*Catalog Page*/
 
-                                            /*Header*/
+                                                /*Catalog Page*/
+                                                /*Header*/
 .wrapper-main {
     display: flex;
     flex-direction: column;
@@ -1429,7 +1590,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-   margin-bottom: -8px;
+    margin-bottom: -8px;
     padding: 0;
 }
 
@@ -1465,137 +1626,13 @@ img {
     background-image: url(../img/icons/quotes.svg);
 }
 
-.header__site-navigation-item-current {
-    color: var(--text-light);
-    text-decoration: none;
-    background-color: var(--soft-red);
-    border-radius: 26px;
-    padding: 5px 14px 8px 14px;
-    display: block;
-}
-
 .header__breadcrumbs-list-item-link {
     font-size: 14px;
     color: var(--text-light);
     text-decoration: none;
 }
 
-/*user full cart */
-.header__user-navigation-user-cart {
-    position: relative;
-}
-
-.header__user-navigation-user-cart-container {
-    position: absolute;
-    right: 0;
-    top: 36px;
-    min-width: 539px;
-    padding: 20px 14px 21px 15px;
-    box-sizing: border-box;
-    background-color: var(--light-yellow);
-    color: var(--text-dark);
-    box-shadow: var(--light-shadow);
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: var(--font-weight-regular);
-    z-index: -1;
-}
-
-.header__user-navigation-user-cart-order-table {
-    border-bottom: 1px solid var(--mid-grey);
-    border-collapse: collapse;
-}
-.header__user-navigation-user-cart-order-table td {
-        padding-bottom: 16px;
-        padding-left: 4px;
-        padding-right: 7px;
-}
-/*То как сделала достаточно? Я уже где только можно подкрутила(*/
-.header__user-navigation-user-cart-order-item {
-    vertical-align: top;
-}
-.delete-button {
-    width: 11px;
-    height: 11px;
-    padding:0 0 10px;
-    margin: 0;
-    border: none;
-    background-image: url("../img/icons/small-close.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-color: var(--transparent-bg);
-    cursor: pointer;   
-}
-.header__user-navigation-user-cart-order-item-thumbnail {
-     padding: 0 9px 0 13px;
-}
-.header__user-navigation-user-cart-item-image {
-     border-radius: 50%;
-     width: 33px;
-     height: 33px;
-}
-
-.header__user-navigation-user-cart-order-item-description {
-      width: 240px;
-      padding: 11px 3px;
-}
-.header__user-navigation-user-cart-order-item-weight {
-    width:110px;
-    padding: 11px 5px;
-}
-
-.header__user-navigation-user-cart-order-item-price {
-     padding: 11px 4px;
-}
-.header__user-navigation-user-cart-order-item-price-per-weight {
-       color: var(--lightest-grey);
-}
-.header__user-navigation-user-cart:hover .header__user-navigation-user-cart-container {
-    z-index: 1;
-}
-
-/*cart total*/
-.header__user-navigaion-user-cart-total {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 0;
-    margin: 0;
-}
-
-.header__user-navigation-user-cart-table-total-price {
-    display: block;
-    margin-bottom: 16px;
-    margin-top: 17px;
-    font-size: 15px;
-    line-height: 16px;
-    font-weight: var(--font-weight-bold);
-    color: var(--text-dark);
-}
-
-.header__user-navigation-user-cart-table-order-button {
-    font-size: 18px;
-    line-height:16px;
-    padding: 13px 15px 13px 15px;
-    font-weight: var(--font-weight-bold);
-    text-decoration: none;
-    color: var(--text-light);
-    background-image: var(--button-rest);
-    border: none;
-    border-radius: 26px;
-    box-shadow: var(--reddish-shadow);
-    box-sizing: border-box;
-}
-
-.header__user-navigation-user-cart-table-order-button:hover {
-    background-image: var(--button-hover);
-}
-
-.header__user-navigation-user-cart-table-order-button:active {
-    background-image: var(--button-pressed);
-}
-                                            /*Filters*/
+                                                /*Filters*/
 .filters {
     font-size: 16px;
     line-height: 18px;
@@ -1618,7 +1655,7 @@ img {
     font-weight: var(--font-weight-medium);
 }
 
-/*sorting filter*/
+                                                /*Sorting filter*/
 .filters__filters-form-sorting-filter {
     border: none;
     margin: 0 13px 14px 0;
@@ -1650,12 +1687,11 @@ img {
     color: var(--black);
 }
 
-
 .sorting-filter-list:hover {
     color: var(--text-dark);
 }
 
-/*price filter*/
+                                                /*Price filter*/
 .filters__filters-form-price-range-filter {
     border: none;
     margin: 0 13px 14px 0;
@@ -1710,10 +1746,10 @@ img {
 }
 
 .toggle:hover {
- transform: scale(1.1);
+    transform: scale(1.1);
 }
-/*Нашла на htmlbook что можно так, правильно же?*/
-/*fat filter*/
+
+                                                /*Fat filter*/
 .filters__filters-form-fat-filter {
     border: none;
     margin: 0 13px 14px 0;
@@ -1782,7 +1818,7 @@ img {
     opacity: 1;
 }
 
-/*taste filter*/
+                                                /*Taste filter*/
 .filters__filters-form-taste-filter {
     border: none;
     margin: 0 13px 14px 0;
@@ -1802,19 +1838,22 @@ img {
     background-color: var(--border-transparent);
     border-radius: 20px;
 }
+
 .filters__filters-form-taste-filter-list-item:nth-child(1) {
-     margin-right: 21px;
+    margin-right: 21px;
 }
+
 .filters__filters-form-taste-filter-list-item:nth-child(2) {
-     margin-right: 25px;
+    margin-right: 25px;
 }
+
 .filters__filters-form-taste-filter-list-item:nth-child(3) {
-     margin-right: 28px;
+    margin-right: 28px;
 }
+
 .filters__filters-form-taste-filter-list-item:nth-child(4) {
     margin-right: 23px;
 }
-/*Если ввести значения так- все встаёт ровно, нужно оставить общий отступ для всех?*/
 
 .checkbox-input {
     appearance: none;
@@ -1825,7 +1864,6 @@ img {
     padding-left: 32px;
     cursor: pointer;
 }
-
 .taste-filter-label::before {
     position: absolute;
     content: "";
@@ -1840,7 +1878,6 @@ img {
     opacity: 0.8;
 }
 
-/*Как правильно сдвинуть последние три фильтра? */
 .checkbox-input:checked + .taste-filter-label::before {
     background-image: url(../img/icons/checkbox-on.svg);
 }
@@ -1876,21 +1913,8 @@ img {
     background-color: var(--fade-grey);
 }
 
-                                            /*Catalog*/
-
-.site-wrapper-catalog {
-    background-color: var(--slider-one-dark);
-}
-
-.catalog {
-    padding-top: 40px;
-    padding-bottom: 30px;
-}
-
-.catalog .catalog__catalog-list {
-    margin-bottom: 75px;
-}
-/*pagination list*/
+                                                /*Catalog*/
+                                                /*Pagination list*/
 .catalog__pagination {
     display: flex;
     justify-content: flex-end;
@@ -1919,7 +1943,7 @@ img {
 .catalog__pagination-list-item:not(:last-child) {
     margin-right: 6px;
 }
-/*Выровняла по 3 и 4 сходятся не ровно(*/
+
 .catalog__pagination-button {
     width: 7px;
     height: 12px;
@@ -1943,22 +1967,28 @@ img {
     line-height: 18px;
     font-weight: var(--font-weight-medium);
 }
+
 .catalog__catalog-list-item-button:hover {
     background-image: var(--button-hover);
 }
+
 .catalog__catalog-list-item-button:active {
     background-image: var(--button-pressed);
 }
+
 .catalog__pagination-list-item:hover {
     background-color: var(--border-transparent);
 }
+
 .catalog__pagination-list-item:active {
     background-color: var(--white);
     border-radius: 50%;
 }
+
 .catalog__pagination-list-item-link:active {
     color: var(--text-dark);
 }
+
 .catalog__pagination-list-item.item-current {
     color: var(--text-dark);
     background-color: var(--white);
