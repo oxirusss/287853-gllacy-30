@@ -59,7 +59,8 @@
                                 </svg>
                             </button>
                             <div class="header__user-navigation-user-search-form-field">
-                                <input class="input-search" type="search" name="search" id="search-form" placeholder="Крем-брюле">
+                                 <label for="search-form" class="visually-hidden">Поиск по сайту</label>
+                                 <input class="input-search" type="search" name="search" id="search-form" placeholder="Крем-брюле">
                             </div>
                         </form>
                     </li>
@@ -76,18 +77,18 @@
                                 <div class="header__user-navigation-user-login-form-popup-login-fields">
                                     <p class="header__user-navigation-user-login-form-popup-login-fields-text">
                                         <label for="email-field" class="visually-hidden">Email</label>
-                                        <input class="input-email" type="email" name="email" id="email-field" placeholder="Электронная почта">
+                                        <input class="input-email" type="email" name="email" id="email-field" placeholder="email@example.com">
                                     </p>
                                     <p class="header__user-navigation-user-login-form-popup-login-fields-text">
                                         <label for="password-field" class="visually-hidden">Пароль</label>
-                                        <input class="input-password" type="password" name="password" id="password-field" placeholder="Пароль">
+                                        <input class="input-password" type="password" name="password" id="password-field" placeholder="......">
                                     </p>
                                 </div>
                                 <div class="header__user-navigation-user-login-form-popup-login-help">
                                     <button class="header__user-navigation-user-login-form-popup-login-help-button" type="submit">Войти</button>
                                     <div class="header__user-navigation-user-login-form-popup-login-help-links">
-                                        <p><a class="header__user-navigation-login-help-link" href="#">Забыли пароль?</a></p>
-                                        <p><a class="header__user-navigation-login-help-link" href="#">Новая регистрация</a></p>
+                                      <a class="header__user-navigation-login-help-link" href="#">Забыли пароль?</a>
+                                      <a class="header__user-navigation-login-help-link" href="#">Новая регистрация</a>
                                     </div>
                                 </div>
                             </div>
@@ -314,6 +315,7 @@
                     <li class="footer__service-info-list-right-item">
                         <a class="footer__service-info-link" href="#">О производстве</a>
                     </li>
+                    
                 </ul>
                 <ul class="footer__service-info-list-left">
                     <li class="footer__service-info-list-left-item">
@@ -334,7 +336,7 @@
             <div class="modal-feedback__form-container">
                 <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
                     <p class="modal-feedback-title">Мы обязательно вам ответим!</p>
-                    <button class="modal-feedback__form-button-close"><span class="visually-hidden">Закрыть</span></button>
+                    <button class="modal-feedback__form-button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
                     <div class="modal-feedback__form-item">
                         <label for="feedback-name-field" class="visually-hidden">Имя Фамилия</label>
                         <input class="modal-feedback__form-input" type="text" name="feedback-name" id="feedback-name-field" placeholder="Имя Фамилия" required>

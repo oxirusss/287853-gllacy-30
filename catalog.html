@@ -56,7 +56,8 @@
                                 </svg>
                             </button>
                             <div class="header__user-navigation-user-search-form-field">
-                                <input class="input-search" type="search" name="search" id="search-form" placeholder="Крем-брюле">
+                               <label for="search-form" class="visually-hidden">Поиск по сайту</label>
+                               <input class="input-search" type="search" name="search" id="search-form" placeholder="Крем-брюле">
                             </div>
                         </form>
                     </li>
@@ -73,7 +74,7 @@
                                 <div class="header__user-navigation-user-login-form-popup-login-fields">
                                     <p class="header__user-navigation-user-login-form-popup-login-fields-text">
                                         <label for="email-field" class="visually-hidden">Email</label>
-                                        <input class="input-email" type="email" name="email" id="email-field" placeholder="Электронная почта">
+                                        <input class="input-email" type="email" name="email" id="email-field" placeholder="email@example.com">
                                     </p>
                                     <p class="header__user-navigation-user-login-form-popup-login-fields-text">
                                         <label for="password-field" class="visually-hidden">Пароль</label>
@@ -160,16 +161,17 @@
                 <h2 class="visually-hidden">Фильтры для поиска</h2>
                 <form class="filters__filters-form" method="get" action="https://echo.htmlacademy.ru">
                     <fieldset class="filters__filters-form-sorting-filter">
-                        <legend class="filter-legend">Сортировка:</legend>
-                        <select class="sorting-filter-list" name="sorting-list">
-                            <option value="по популярности">по популярности</option>
-                            <option value="сначала недорогие">сначала недорогие</option>
-                            <option value="сначала дорогие">сначала дорогие</option>
-                            <option value="по жирности">по жирности</option>
-                        </select>
-                        <svg class="sorting-filter-list-arrow" width="11" height="10" viewBox="0 0 11 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.5 10L0 0H11" />
-                        </svg>
+                        <label for="sorting-filter" class="filter-legend">Сортировка:</label>
+                        <div class="sorting-filter-wrapper"><select class="sorting-filter-list" name="sorting-list" id="sorting-filter">
+                                <option value="по популярности">по популярности</option>
+                                <option value="сначала недорогие">сначала недорогие</option>
+                                <option value="сначала дорогие">сначала дорогие</option>
+                                <option value="по жирности">по жирности</option>
+                            </select>
+                            <svg class="sorting-filter-list-arrow" width="11" height="10" viewBox="0 0 11 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 10L0 0H11" />
+                            </svg>
+                        </div>
                     </fieldset>
                     <fieldset class="filters__filters-form-price-range-filter">
                         <legend class="filter-legend">Цена: 100 &#8381; – 500 &#8381;</legend>
@@ -381,11 +383,11 @@
                     </li>
                 </ul>
                 <div class="catalog__pagination">
-                    <button class="catalog__pagination-button button-back" type="button">
-                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542254 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167729 6.84111 0.121247C6.73357 0.0364305 6.59506 -0.00654749 6.45436 0.00124741C6.38391 0.000447984 6.31406 0.0133806 6.2493 0.0392141C6.18454 0.0650476 6.12631 0.10321 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685815 5.73303 0.0413108 5.79396C0.0140401 5.85489 0 5.92024 0 5.98625C0 6.05225 0.0140401 6.11761 0.0413108 6.17854C0.0685815 6.23947 0.108543 6.29477 0.15889 6.34125Z" fill="white" fill-opacity="0.2" />
-                        </svg>
-                        <span class="visually-hidden">Назад</span></button>
+                   <a href="#" class="catalog__pagination-button button-back">
+                           <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542254 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167729 6.84111 0.121247C6.73357 0.0364305 6.59506 -0.00654749 6.45436 0.00124741C6.38391 0.000447984 6.31406 0.0133806 6.2493 0.0392141C6.18454 0.0650476 6.12631 0.10321 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685815 5.73303 0.0413108 5.79396C0.0140401 5.85489 0 5.92024 0 5.98625C0 6.05225 0.0140401 6.11761 0.0413108 6.17854C0.0685815 6.23947 0.108543 6.29477 0.15889 6.34125Z" fill="white" fill-opacity="0.2" />
+                           </svg>
+                        <span class="visually-hidden">Назад</span></a>
                     <ul class="catalog__pagination-list">
                         <li class="catalog__pagination-list-item item-current">
                             <a class="catalog__pagination-list-item-link-current">1</a>
@@ -403,11 +405,10 @@
                             <a class="catalog__pagination-list-item-link" href="#">5</a>
                         </li>
                     </ul>
-                    <button class="catalog__pagination-button button-forward" type="button">
-                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="catalog__pagination-button button-forward"> <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" fill="white" />
                         </svg>
-                        <span class="visually-hidden">Вперед</span></button>
+                        <span class="visually-hidden">Вперед</span></a>
                 </div>
             </section>
         </main>
