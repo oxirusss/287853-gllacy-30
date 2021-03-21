@@ -5,12 +5,10 @@
     <meta charset="utf-8">
     <title>Магазин мороженного Глейси</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="icon" href="./img/favicon-icons/152.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./img/favicon-icons/apple-icon.svg">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -59,8 +57,8 @@
                                 </svg>
                             </button>
                             <div class="header__user-navigation-user-search-form-field">
-                                 <label for="search-form" class="visually-hidden">Поиск по сайту</label>
-                                 <input class="input-search" type="search" name="search" id="search-form" placeholder="Крем-брюле">
+                                <label for="search-form" class="visually-hidden">Поиск по сайту</label>
+                                <input class="input-search" type="search" name="search" id="search-form" placeholder="Крем-брюле">
                             </div>
                         </form>
                     </li>
@@ -87,8 +85,8 @@
                                 <div class="header__user-navigation-user-login-form-popup-login-help">
                                     <button class="header__user-navigation-user-login-form-popup-login-help-button" type="submit">Войти</button>
                                     <div class="header__user-navigation-user-login-form-popup-login-help-links">
-                                      <a class="header__user-navigation-login-help-link" href="#">Забыли пароль?</a>
-                                      <a class="header__user-navigation-login-help-link" href="#">Новая регистрация</a>
+                                        <a class="header__user-navigation-login-help-link" href="#">Забыли пароль?</a>
+                                        <a class="header__user-navigation-login-help-link" href="#">Новая регистрация</a>
                                     </div>
                                 </div>
                             </div>
@@ -252,16 +250,19 @@
             </div>
             <section class="contacts">
                 <h2 class="visually-hidden">Как нас найти</h2>
-                <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003108!2d30.32085871606642!3d59.938719169054174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1615439467896!5m2!1sru!2sus" width="600" height="430" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="contacts__address">
-                    <p class="contacts__address-text">Адрес главного офиса<br> и офлайн-магазина: <br>
-                        <span class="contacts__address-text-special">ул. Большая Конюшенная, <br> 19/8, Санкт-Петербург</span>
-                    </p>
-                    <p class="contacts__address-text-phone">Для заказов по телефону: <br>
-                        <a class="contacts__phone" href="tel:88124502525">8 812 450-25-25</a> <br>
-                        (с 10 до 20 ежедневно)
-                    </p>
-                    <a class="contacts__button" href="#">Форма обратной связи</a>
+                <iframe class="contacts__map-flexible" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003108!2d30.32085871606642!3d59.938719169054174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1615439467896!5m2!1sru!2sus" width="600" height="430" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="contacts__address-wrapper">
+                    <img class="contacts__map" src="./img/backgrounds/map-bg.jpg" alt="дрес главного офиса" width="1200" height="430">
+                    <div class="contacts__address">
+                        <p class="contacts__address-text">Адрес главного офиса<br> и офлайн-магазина: <br>
+                            <span class="contacts__address-text-special">ул. Большая Конюшенная, <br> 19/8, Санкт-Петербург</span>
+                        </p>
+                        <p class="contacts__address-text-phone">Для заказов по телефону: <br>
+                            <a class="contacts__phone" href="tel:88124502525">8 812 450-25-25</a> <br>
+                            (с 10 до 20 ежедневно)
+                        </p>
+                        <a class="contacts__button" href="#">Форма обратной связи</a>
+                    </div>
                 </div>
             </section>
         </main>
@@ -315,7 +316,7 @@
                     <li class="footer__service-info-list-right-item">
                         <a class="footer__service-info-link" href="#">О производстве</a>
                     </li>
-                    
+
                 </ul>
                 <ul class="footer__service-info-list-left">
                     <li class="footer__service-info-list-left-item">
